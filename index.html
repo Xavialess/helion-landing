@@ -269,64 +269,6 @@
     .cell.glo { background: rgba(232,50,28,.3); }
     .cell.mid { background: rgba(242,237,227,.08); }
 
-    /* ── FOUNDER ── */
-    .founder { padding: 80px 56px; border-bottom: var(--brd); background: var(--cream); }
-    .founder-grid {
-      display: grid; grid-template-columns: 200px 1fr;
-      gap: 64px; align-items: start; max-width: 860px;
-    }
-    .founder-photo {
-      width: 200px; height: 240px;
-      background: #D8D3CA;
-      border: var(--brd); position: relative; overflow: hidden;
-      flex-shrink: 0;
-    }
-    .founder-photo::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(160deg, #C8C3BA 0%, #A8A39A 100%);
-    }
-    .founder-photo::after {
-      content: 'XQ';
-      position: absolute; bottom: 16px; right: 16px;
-      font-family: var(--fm); font-size: 13px; font-weight: 700;
-      color: rgba(17,17,17,.3); letter-spacing: .04em;
-    }
-    .founder-eyebrow {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase; color: var(--red);
-      margin-bottom: 18px; display: flex; align-items: center; gap: 8px;
-    }
-    .founder-eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--red); }
-    .founder-quote {
-      font-family: var(--fh);
-      font-size: clamp(1.3rem, 2.2vw, 2rem);
-      font-weight: 700; letter-spacing: -.03em; line-height: 1.2;
-      color: var(--ink); margin-bottom: 24px; font-style: normal;
-    }
-    .founder-quote em { color: var(--red); font-style: normal; }
-    .founder-bio { font-size: 15px; color: var(--gray); line-height: 1.85; max-width: 500px; }
-    .founder-bio + .founder-bio { margin-top: 12px; }
-    .founder-meta {
-      margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(17,17,17,.1);
-      display: flex; align-items: center; justify-content: space-between; gap: 20px;
-    }
-    .fm-name { font-family: var(--fm); font-size: 13px; font-weight: 700; color: var(--ink); letter-spacing: .04em; }
-    .fm-role { font-family: var(--fm); font-size: 11px; color: var(--gray); letter-spacing: .03em; margin-top: 3px; }
-    .fm-badges { display: flex; gap: 6px; flex-wrap: wrap; }
-    .fm-badge {
-      font-family: var(--fm); font-size: 9px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase;
-      border: 1px solid rgba(17,17,17,.15); padding: 3px 8px; color: var(--gray);
-    }
-    .fm-link {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .07em; text-transform: uppercase; text-decoration: none;
-      color: var(--ink); border-bottom: 2px solid var(--ink);
-      padding-bottom: 1px; transition: color .15s, border-color .15s; white-space: nowrap;
-    }
-    .fm-link:hover { color: var(--red); border-color: var(--red); }
-
     /* ── PROCESS ── */
     .process { padding: 80px 56px; border-bottom: var(--brd); }
     .proc-grid { display: grid; grid-template-columns: 1fr 3fr; gap: 80px; }
@@ -427,8 +369,7 @@
         border-bottom: var(--brd); background: var(--cream);
         padding: 16px 24px; justify-content: space-between; align-items: center;
       }
-      .svc-header, .ai-grid, .proc-grid, .founder-grid { grid-template-columns: 1fr; }
-      .founder-photo { width: 120px; height: 140px; }
+      .svc-header, .ai-grid, .proc-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr 1fr; }
       .stat-box { border-right: none; border-bottom: var(--brd); }
       .cta { grid-template-columns: 1fr; }
@@ -486,9 +427,8 @@
   <ul class="side-links" role="list">
     <li><a href="#servicios"><span class="n">01</span> Servicios</a></li>
     <li><a href="#ia"><span class="n">02</span> IA</a></li>
-    <li><a href="#nosotros"><span class="n">03</span> Nosotros</a></li>
-    <li><a href="#proceso"><span class="n">04</span> Proceso</a></li>
-    <li><a href="#contacto"><span class="n">05</span> Contacto</a></li>
+    <li><a href="#proceso"><span class="n">03</span> Proceso</a></li>
+    <li><a href="#contacto"><span class="n">04</span> Contacto</a></li>
   </ul>
   <a href="#contacto" class="side-cta">Hablemos →</a>
 </nav>
@@ -662,36 +602,6 @@
           </div>
         </li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOUNDER ── -->
-<section class="founder" id="nosotros" aria-labelledby="founder-h">
-  <div class="founder-grid rv">
-    <div class="founder-photo" role="img" aria-label="Xavier Quintanilla, Fundador de Helion"></div>
-    <div>
-      <div class="founder-eyebrow">Quién está detrás</div>
-      <blockquote class="founder-quote" id="founder-h">
-        "Hice tecnología para grandes<br>
-        empresas en el norte. Volví a Ecuador<br>
-        para <em>hacerla para las de aquí.</em>"
-      </blockquote>
-      <p class="founder-bio">Soy Xavier, Computer Engineer por la Universidad de Alberta con especialización en Nanoscale System Design. Pasé años estudiando software, diseño de hardware y la nanofabricación en el mundo de los semiconductores. Mi experiencia en Garmin, contribuyendo a su software embebido de dispositivos wearables, y en ExxonMobil manejando infraestructura industrial me motivaron a volver a Ecuador a impulsar el desarrollo tecnológico de mi país.</p>
-      <p class="founder-bio">Fundé Helion para traer a Ecuador ese nivel de rigor tecnológico, y ser parte del impulso y desarrollo que este país — y Latinoamérica — necesitan.</p>
-      <div class="founder-meta">
-        <div>
-          <div class="fm-name">XAVIER QUINTANILLA</div>
-          <div class="fm-role">Fundador &amp; CEO · Helion Technology</div>
-          <div class="fm-badges" style="margin-top:10px">
-            <span class="fm-badge">Garmin</span>
-            <span class="fm-badge">ExxonMobil</span>
-            <span class="fm-badge">NanoFAB · UAlberta</span>
-            <span class="fm-badge">CCNA</span>
-          </div>
-        </div>
-        <a href="https://www.linkedin.com/in/xavi-quintanilla" target="_blank" rel="noopener noreferrer" class="fm-link">LinkedIn →</a>
-      </div>
     </div>
   </div>
 </section>
