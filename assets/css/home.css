@@ -3,7 +3,7 @@
 .hero-h1 { font-size: clamp(3.5rem, 8vw, 8rem); font-weight: 700; line-height: .97; letter-spacing: -.04em; max-width: 900px; }
 .hero-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; border-top: 1px solid rgba(245,243,236,.12); padding-top: 28px; margin-top: 60px; }
 .hero-sub { font-size: 15px; line-height: 1.75; color: var(--gray-on-dark); max-width: 360px; }
-.hero-actions { display: flex; gap: 12px; justify-content: flex-end; }
+.hero-actions { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
 
 .section-pad { padding: var(--space-section) 56px; }
 .sec-h2 { font-size: clamp(2rem, 3.5vw, 3.8rem); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; }
