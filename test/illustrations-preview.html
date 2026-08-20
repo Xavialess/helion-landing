@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Illustration preview harness</title>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/illustrations.css">
+  <style>
+    body { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; background: #fff; }
+    .box { width: 220px; height: 150px; border: 1px solid #ccc; }
+    .box.dark { background: var(--ink-dark); }
+  </style>
+</head>
+<body>
+  <div class="box" id="network-light"></div>
+  <div class="box dark" id="network-dark"></div>
+  <script type="module">
+    import { mountNetwork } from '../assets/js/illustrations/network.js';
+    mountNetwork(document.getElementById('network-light'), { onDark: false });
+    mountNetwork(document.getElementById('network-dark'), { onDark: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.ill { width: 100%; height: 100%; display: block; }
+.ill-network .node { fill: var(--red); }
+.ill-network.ill--on-dark .node { fill: var(--red-glow); }
+.ill-network .link { stroke: var(--red); stroke-width: 1; opacity: .45; }
+.ill-network.ill--on-dark .link { stroke: var(--red-glow); }
+.ill-network .node--hub { animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-network .node--sat { animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-network .node--sat:nth-child(2) { animation-delay: .3s; }
+.ill-network .node--sat:nth-child(3) { animation-delay: .6s; }
+.ill-network .node--sat:nth-child(4) { animation-delay: .9s; }
+.ill-network .node--sat:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes ill-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-network .node--hub, .ill-network .node--sat { animation: none; opacity: 1; }
+}
