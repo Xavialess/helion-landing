@@ -1,0 +1,24 @@
+:root {
+  --cream: #F2EDE3;
+  --ink: #111111;
+  --ink-dark: #0C0D0B;
+  --paper: #F5F3EC;
+  --red: #E8560C;
+  --red-glow: #FF7A40;
+  --gray: #767676;
+  --gray-on-dark: rgba(245, 243, 236, .55);
+
+  --fh: 'Space Grotesk', sans-serif;
+  --fm: 'Space Mono', monospace;
+  --fa: 'Archivo', sans-serif;
+  --fs: 'Fraunces', serif;
+
+  --radius-pill: 999px;
+  --radius-sm: 8px;
+
+  --dur-fast: 150ms;
+  --dur-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+}
