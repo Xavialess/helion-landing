@@ -17,3 +17,25 @@
 @media (prefers-reduced-motion: reduce) {
   .ill-network .node--hub, .ill-network .node--sat { animation: none; opacity: 1; }
 }
+
+.ill-orbit .core { fill: var(--red); }
+.ill-orbit.ill--on-dark .core { fill: var(--red-glow); }
+.ill-orbit .ring { stroke: var(--red); stroke-width: 1; fill: none; opacity: .4; }
+.ill-orbit.ill--on-dark .ring { stroke: var(--red-glow); }
+.ill-orbit .particle { fill: var(--red); }
+.ill-orbit.ill--on-dark .particle { fill: var(--red-glow); }
+.ill-orbit .ring-group {
+  transform-box: fill-box; transform-origin: center;
+  animation: ill-rotate 14s linear infinite;
+}
+.ill-orbit .ring-group:nth-child(2) { animation-duration: 20s; animation-direction: reverse; }
+.ill-orbit .ring-group:nth-child(3) { animation-duration: 26s; }
+
+@keyframes ill-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-orbit .ring-group { animation: none; }
+}
