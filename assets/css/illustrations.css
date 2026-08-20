@@ -39,3 +39,22 @@
 @media (prefers-reduced-motion: reduce) {
   .ill-orbit .ring-group { animation: none; }
 }
+
+.ill-device .body { stroke: var(--red); stroke-width: 1.5; fill: none; }
+.ill-device.ill--on-dark .body { stroke: var(--red-glow); }
+.ill-device .led { fill: var(--red); }
+.ill-device.ill--on-dark .led { fill: var(--red-glow); }
+.ill-device .wave { stroke: var(--red); stroke-width: 1; fill: none; opacity: 0; animation: ill-wave 2.4s ease-out infinite; }
+.ill-device.ill--on-dark .wave { stroke: var(--red-glow); }
+.ill-device .wave:nth-child(3) { animation-delay: 0s; }
+.ill-device .wave:nth-child(4) { animation-delay: .6s; }
+.ill-device .wave:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes ill-wave {
+  0% { opacity: .6; transform: scale(.85); }
+  100% { opacity: 0; transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-device .wave { animation: none; opacity: .25; }
+}
