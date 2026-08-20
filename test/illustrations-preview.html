@@ -18,16 +18,21 @@
   <div class="box dark" id="orbit-dark"></div>
   <div class="box" id="device-light"></div>
   <div class="box dark" id="device-dark"></div>
+  <div class="box" id="dashboard-light"></div>
+  <div class="box dark" id="dashboard-dark"></div>
   <script type="module">
     import { mountNetwork } from '../assets/js/illustrations/network.js';
     import { mountOrbit } from '../assets/js/illustrations/orbit.js';
     import { mountDevice } from '../assets/js/illustrations/device.js';
+    import { mountDashboard } from '../assets/js/illustrations/dashboard.js';
     mountNetwork(document.getElementById('network-light'), { onDark: false });
     mountNetwork(document.getElementById('network-dark'), { onDark: true });
     mountOrbit(document.getElementById('orbit-light'), { onDark: false });
     mountOrbit(document.getElementById('orbit-dark'), { onDark: true });
     mountDevice(document.getElementById('device-light'), { onDark: false });
     mountDevice(document.getElementById('device-dark'), { onDark: true });
+    mountDashboard(document.getElementById('dashboard-light'), { onDark: false });
+    mountDashboard(document.getElementById('dashboard-dark'), { onDark: true });
   </script>
 </body>
 </html>
