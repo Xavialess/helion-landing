@@ -412,10 +412,9 @@ git commit -m "feat: add kinetic counter math (tested) and shared page bootstrap
 .ill-network.ill--on-dark .link { stroke: var(--red-glow); }
 .ill-network .node--hub { animation: ill-pulse 2.4s ease-in-out infinite; }
 .ill-network .node--sat { animation: ill-pulse 2.4s ease-in-out infinite; }
-.ill-network .node--sat:nth-child(2) { animation-delay: .3s; }
-.ill-network .node--sat:nth-child(3) { animation-delay: .6s; }
-.ill-network .node--sat:nth-child(4) { animation-delay: .9s; }
-.ill-network .node--sat:nth-child(5) { animation-delay: 1.2s; }
+.ill-network .node--sat:nth-child(7) { animation-delay: .3s; }
+.ill-network .node--sat:nth-child(8) { animation-delay: .6s; }
+.ill-network .node--sat:nth-child(9) { animation-delay: .9s; }
 
 @keyframes ill-pulse {
   0%, 100% { opacity: 1; }
@@ -730,10 +729,9 @@ git commit -m "feat: add device illustration module"
 .ill-dashboard.ill--on-dark .frame { stroke: var(--red-glow); }
 .ill-dashboard .bar { fill: var(--red); opacity: .55; animation: ill-bar 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
 .ill-dashboard.ill--on-dark .bar { fill: var(--red-glow); }
-.ill-dashboard .bar:nth-child(3) { animation-delay: 0s; }
-.ill-dashboard .bar:nth-child(4) { animation-delay: .3s; }
-.ill-dashboard .bar:nth-child(5) { animation-delay: .6s; }
-.ill-dashboard .bar:nth-child(6) { animation-delay: .9s; }
+.ill-dashboard .bar:nth-child(3) { animation-delay: .3s; }
+.ill-dashboard .bar:nth-child(4) { animation-delay: .6s; }
+.ill-dashboard .bar:nth-child(5) { animation-delay: .9s; }
 .ill-dashboard .line { stroke: var(--red); stroke-width: 1.5; fill: none; stroke-dasharray: 120; stroke-dashoffset: 120; animation: ill-draw 3s ease-in-out infinite; }
 .ill-dashboard.ill--on-dark .line { stroke: var(--red-glow); }
 
