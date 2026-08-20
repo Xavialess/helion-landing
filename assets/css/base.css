@@ -1,0 +1,137 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--fh);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+a { color: inherit; }
+
+/* ── EYEBROW / ACCENT TYPE ── */
+.eyebrow {
+  font-family: var(--fm); font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+}
+.eyebrow::before { content: ''; width: 16px; height: 1.5px; background: currentColor; }
+
+.accent {
+  font-family: var(--fs); font-style: italic; font-weight: 400;
+  color: var(--red);
+}
+.on-dark .accent { color: var(--red-glow); }
+
+/* ── PILL BUTTONS ── */
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px; border-radius: var(--radius-pill);
+  font-family: var(--fm); font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: transform var(--dur-fast) var(--ease-out-expo),
+              box-shadow var(--dur-fast) var(--ease-out-expo),
+              background var(--dur-fast), color var(--dur-fast);
+}
+.btn-pill:hover { transform: scale(1.02); }
+
+.btn-pill--solid { background: var(--red); color: var(--paper); }
+.btn-pill--solid:hover { box-shadow: 0 0 24px rgba(232, 86, 12, .45); }
+.on-dark .btn-pill--solid { background: var(--red-glow); color: var(--ink-dark); }
+.on-dark .btn-pill--solid:hover { box-shadow: 0 0 24px rgba(255, 122, 64, .4); }
+
+.btn-pill--outline { border-color: var(--ink); color: var(--ink); }
+.btn-pill--outline:hover { background: var(--ink); color: var(--cream); }
+.on-dark .btn-pill--outline { border-color: rgba(245, 243, 236, .35); color: var(--paper); }
+.on-dark .btn-pill--outline:hover { background: var(--paper); color: var(--ink-dark); }
+
+/* ── REVEAL ON SCROLL ── */
+.rv { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.rv.in { opacity: 1; transform: none; }
+.d1 { transition-delay: .1s } .d2 { transition-delay: .2s } .d3 { transition-delay: .3s }
+
+/* ── SIDE NAV (dark) ── */
+.sidenav {
+  position: fixed; top: 0; left: 0; bottom: 0; width: 200px;
+  border-right: 1px solid rgba(245, 243, 236, .1);
+  display: flex; flex-direction: column;
+  padding: 32px 24px;
+  background: var(--ink-dark); color: var(--paper);
+  z-index: 200;
+}
+.logo-link {
+  display: flex; align-items: center; gap: 9px;
+  text-decoration: none; color: var(--paper);
+  margin-bottom: 56px; line-height: 1;
+}
+.logo-mark { width: 32px; height: 32px; flex-shrink: 0; display: block; }
+.logo-word { font-family: var(--fa); font-weight: 900; font-size: 17px; letter-spacing: -0.01em; color: currentColor; }
+.side-links { list-style: none; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.side-links a {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--fm); font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--gray-on-dark);
+  text-decoration: none; padding: 7px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+.side-links a:hover, .side-links a[aria-current="page"] { color: var(--paper); border-color: var(--paper); }
+.side-links a .n { color: var(--red-glow); font-size: 9px; }
+
+main { margin-left: 200px; }
+
+/* ── MOBILE NAV ── */
+.mobile-nav { display: none; }
+@media (max-width: 900px) {
+  .sidenav { display: none; }
+  main { margin-left: 0; }
+  .mobile-nav {
+    display: flex !important;
+    position: sticky; top: 0; z-index: 200;
+    border-bottom: 1px solid rgba(245, 243, 236, .1);
+    background: var(--ink-dark); color: var(--paper);
+    padding: 16px 24px; justify-content: space-between; align-items: center;
+  }
+}
+
+/* ── TICKER (cream) ── */
+.ticker { border-bottom: 1px solid rgba(17, 17, 17, .12); padding: 13px 0; overflow: hidden; background: var(--cream); }
+.ticker-track { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+.t-i {
+  display: flex; align-items: center; gap: 20px; padding: 0 20px;
+  font-family: var(--fm); font-size: 10px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink); white-space: nowrap;
+}
+.t-sep { color: var(--red); }
+@keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+/* ── FOOTER (dark) ── */
+footer { background: var(--ink-dark); color: var(--paper); border-top: 1px solid rgba(245, 243, 236, .1); padding: 48px 56px 32px; }
+.ft-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.ft-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--paper); margin-bottom: 14px; line-height: 1; }
+.ft-logo .logo-mark { width: 30px; height: 30px; }
+.ft-logo .logo-word { font-size: 19px; }
+.ft-brand p { font-size: 13px; color: var(--gray-on-dark); line-height: 1.7; max-width: 280px; }
+.ft-col h5 { font-family: var(--fm); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(245, 243, 236, .4); margin-bottom: 20px; }
+.ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: 13px; color: var(--gray-on-dark); text-decoration: none; transition: color var(--dur-fast); }
+.ft-col a:hover { color: var(--paper); }
+.ft-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(245, 243, 236, .1); font-family: var(--fm); font-size: 10px; letter-spacing: .05em; color: rgba(245, 243, 236, .3); text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .ft-row { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .rv { transition: none; opacity: 1; transform: none; }
+}
