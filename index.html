@@ -6,392 +6,17 @@
   <title>Helion — Tecnología que transforma tu empresa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --cream: #F2EDE3;
-      --ink:   #111111;
-      --red:   #E8560C;
-      --gray:  #767676;
-      --brd:   2px solid #111111;
-      --fh: 'Space Grotesk', sans-serif;
-      --fm: 'Space Mono', monospace;
-      --fa: 'Archivo', sans-serif;
-      --solar: #E8560C;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--cream);
-      color: var(--ink);
-      font-family: var(--fh);
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-
-    /* ── SIDE NAV ── */
-    .sidenav {
-      position: fixed; top: 0; left: 0; bottom: 0; width: 200px;
-      border-right: var(--brd);
-      display: flex; flex-direction: column;
-      padding: 32px 24px;
-      background: var(--cream);
-      z-index: 200;
-    }
-    /* ── LOGO SOLAR BLOCK ── */
-    .logo-link {
-      display: flex; align-items: center; gap: 9px;
-      text-decoration: none; color: var(--ink);
-      margin-bottom: 56px; line-height: 1;
-    }
-    .logo-mark {
-      width: 32px; height: 32px; flex-shrink: 0; display: block;
-    }
-    .logo-word {
-      font-family: var(--fa); font-weight: 900;
-      font-size: 17px; letter-spacing: -0.01em; color: currentColor;
-    }
-    .side-links {
-      list-style: none; display: flex; flex-direction: column; gap: 6px; flex: 1;
-    }
-    .side-links a {
-      display: flex; align-items: center; gap: 10px;
-      font-family: var(--fm); font-size: 11px; letter-spacing: .06em;
-      text-transform: uppercase; color: var(--gray);
-      text-decoration: none; padding: 7px 0;
-      border-bottom: 1px solid transparent;
-      transition: color .15s, border-color .15s;
-    }
-    .side-links a:hover { color: var(--ink); border-color: var(--ink); }
-    .side-links a .n { color: var(--red); font-size: 9px; }
-    .side-cta {
-      display: block; background: var(--red); color: var(--cream);
-      padding: 12px; text-align: center; font-family: var(--fm);
-      font-size: 11px; font-weight: 700; letter-spacing: .07em;
-      text-transform: uppercase; text-decoration: none;
-      border: var(--brd); transition: background .15s, color .15s;
-    }
-    .side-cta:hover { background: var(--ink); }
-
-    /* ── MAIN ── */
-    main { margin-left: 200px; }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100dvh; border-bottom: var(--brd);
-      display: grid; grid-template-rows: 1fr auto;
-      padding: 60px 56px 40px;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg-num {
-      position: absolute; right: -20px; top: -40px;
-      font-family: var(--fm); font-size: clamp(280px, 40vw, 520px);
-      font-weight: 700; color: rgba(17,17,17,.04); line-height: 1;
-      pointer-events: none; user-select: none; letter-spacing: -.05em;
-    }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 28px;
-    }
-    .hero-tag::before { content: '●'; font-size: 8px; }
-    .hero-h1 {
-      font-size: clamp(3.5rem, 8vw, 9rem);
-      font-weight: 700; line-height: .95; letter-spacing: -.04em;
-      position: relative; z-index: 1; max-width: 900px;
-    }
-    .hero-h1 .hl {
-      color: var(--cream); -webkit-text-stroke: 2px var(--ink);
-    }
-    .hero-h1 .red { color: var(--red); }
-
-    .hero-bottom {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 40px; align-items: end; border-top: var(--brd);
-      padding-top: 28px; margin-top: 60px;
-    }
-    .hero-sub {
-      font-size: 15px; line-height: 1.75; color: var(--gray); max-width: 360px;
-    }
-    .hero-actions { display: flex; gap: 12px; justify-content: flex-end; }
-    .btn-fill {
-      padding: 14px 28px; background: var(--ink); color: var(--cream);
-      font-family: var(--fm); font-size: 12px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase;
-      text-decoration: none; border: var(--brd);
-      transition: background .15s, color .15s;
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-fill:hover { background: var(--red); border-color: var(--red); }
-    .btn-outline {
-      padding: 14px 28px; background: transparent; color: var(--ink);
-      font-family: var(--fm); font-size: 12px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase;
-      text-decoration: none; border: var(--brd);
-      transition: background .15s, color .15s;
-    }
-    .btn-outline:hover { background: var(--ink); color: var(--cream); }
-
-    /* ── TICKER ── */
-    .ticker {
-      border-bottom: var(--brd); padding: 13px 0; overflow: hidden;
-      background: var(--ink);
-    }
-    .ticker-track {
-      display: flex; width: max-content;
-      animation: ticker 25s linear infinite;
-    }
-    .ticker-track:hover { animation-play-state: paused; }
-    .t-i {
-      display: flex; align-items: center; gap: 20px; padding: 0 20px;
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .08em; text-transform: uppercase;
-      color: var(--cream); white-space: nowrap;
-    }
-    .t-sep { color: var(--red); }
-    @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-    /* ── SERVICES — TABLE ── */
-    .services { padding: 80px 56px; border-bottom: var(--brd); }
-    .svc-header {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 60px; align-items: end; margin-bottom: 56px;
-    }
-    .section-label {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 16px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .section-label::before { content: ''; width: 18px; height: 2px; background: var(--red); }
-    .sec-h2 {
-      font-size: clamp(2rem, 3.5vw, 3.8rem); font-weight: 700;
-      line-height: 1.05; letter-spacing: -.03em;
-    }
-    .svc-header p { color: var(--gray); font-size: 15px; line-height: 1.8; }
-
-    /* Service table */
-    .svc-table { width: 100%; border-collapse: collapse; }
-    .svc-table thead tr {
-      border-top: var(--brd); border-bottom: var(--brd);
-    }
-    .svc-table th {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .09em; text-transform: uppercase; color: var(--gray);
-      padding: 12px 16px 12px 0; text-align: left;
-    }
-    .svc-table th:first-child { width: 40px; }
-    .svc-table td {
-      padding: 24px 16px 24px 0; border-bottom: 1px solid rgba(17,17,17,.12);
-      vertical-align: top;
-    }
-    .td-num {
-      font-family: var(--fm); font-size: 11px; font-weight: 700;
-      color: var(--red); padding-top: 26px !important;
-    }
-    .td-name {
-      font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-      font-weight: 700; letter-spacing: -.02em;
-    }
-    .td-desc { font-size: 13px; color: var(--gray); line-height: 1.7; max-width: 380px; }
-    .td-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .td-tag {
-      font-family: var(--fm); font-size: 9px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase;
-      border: 1px solid rgba(17,17,17,.2); padding: 3px 9px;
-      color: var(--gray);
-    }
-    .svc-table tr:hover .td-name { color: var(--red); }
-    .svc-table tr { transition: none; cursor: default; }
-
-    /* ── STATS ── */
-    .stats { display: grid; grid-template-columns: repeat(4,1fr); border-bottom: var(--brd); }
-    .stat-box {
-      padding: 56px 40px; border-right: var(--brd);
-      position: relative; overflow: hidden;
-    }
-    .stat-box:last-child { border-right: none; }
-    .stat-box::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
-      background: var(--red); transform: scaleX(0); transition: transform .3s;
-      transform-origin: left;
-    }
-    .stat-box:hover::after { transform: scaleX(1); }
-    .stat-n {
-      font-size: clamp(1.15rem, 1.6vw, 1.5rem); font-weight: 700;
-      letter-spacing: -.02em; line-height: 1.2;
-      font-family: var(--fh); margin-bottom: 10px; color: var(--ink);
-    }
-    .stat-n em { color: var(--red); font-style: normal; }
-    .stat-l { font-size: 13px; color: var(--gray); line-height: 1.6; }
-
-    /* ── AI SECTION ── */
-    .ai { padding: 80px 56px; border-bottom: var(--brd); background: var(--ink); color: var(--cream); }
-    .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .ai-copy .section-label { color: var(--red); }
-    .ai-copy .section-label::before { background: var(--red); }
-    .ai-copy .sec-h2 { color: var(--cream); }
-    .ai-copy p { color: rgba(242,237,227,.6); font-size: 15px; line-height: 1.85; margin-top: 20px; }
-    .ai-list { margin-top: 36px; list-style: none; border-top: 1px solid rgba(242,237,227,.1); }
-    .ai-list li {
-      display: flex; gap: 16px; align-items: flex-start;
-      padding: 18px 0; border-bottom: 1px solid rgba(242,237,227,.1);
-    }
-    .ai-list .li-n {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      color: var(--red); flex-shrink: 0; padding-top: 3px;
-    }
-    .ai-list h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--cream); }
-    .ai-list p { font-size: 13px; color: rgba(242,237,227,.55); line-height: 1.65; margin: 0; }
-
-    /* Grid visual */
-    .ai-visual {
-      border: 1px solid rgba(242,237,227,.12);
-      padding: 2px;
-    }
-    .ai-grid-art {
-      display: grid; grid-template-columns: repeat(8,1fr);
-      grid-template-rows: repeat(8,1fr); gap: 2px;
-      aspect-ratio: 1;
-    }
-    .cell {
-      background: rgba(242,237,227,.04);
-      transition: background .3s, transform .3s;
-    }
-    .cell.lit { background: var(--red); }
-    .cell.glo { background: rgba(232,50,28,.3); }
-    .cell.mid { background: rgba(242,237,227,.08); }
-
-    /* ── PROCESS ── */
-    .process { padding: 80px 56px; border-bottom: var(--brd); }
-    .proc-grid { display: grid; grid-template-columns: 1fr 3fr; gap: 80px; }
-    .proc-left .sec-h2 { font-size: clamp(1.8rem, 2.5vw, 3rem); }
-    .steps-list { list-style: none; }
-    .step-li {
-      display: grid; grid-template-columns: 56px 1fr;
-      gap: 24px; align-items: start;
-      padding: 28px 0; border-bottom: 1px solid rgba(17,17,17,.1);
-    }
-    .step-li:first-child { border-top: 1px solid rgba(17,17,17,.1); }
-    .step-num {
-      font-family: var(--fm); font-size: 11px; font-weight: 700;
-      color: var(--red); padding-top: 4px;
-    }
-    .step-li h4 {
-      font-size: 16px; font-weight: 700; margin-bottom: 8px;
-      letter-spacing: -.01em;
-    }
-    .step-li p { font-size: 13px; color: var(--gray); line-height: 1.75; }
-
-    /* ── CTA ── */
-    .cta {
-      padding: 100px 56px;
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 60px; align-items: center;
-      background: var(--red);
-    }
-    .cta h2 {
-      font-size: clamp(2.5rem, 5vw, 6rem);
-      font-weight: 700; letter-spacing: -.04em;
-      line-height: .97; color: var(--cream);
-    }
-    .cta h2 em { color: var(--ink); font-style: normal; -webkit-text-stroke: 0; }
-    .cta-right { display: flex; flex-direction: column; gap: 14px; }
-    .btn-white {
-      padding: 16px 32px; background: var(--cream); color: var(--ink);
-      font-family: var(--fm); font-size: 12px; font-weight: 700;
-      letter-spacing: .07em; text-transform: uppercase;
-      text-decoration: none; border: 2px solid var(--cream);
-      transition: background .15s, color .15s;
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-white:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
-    .btn-ghost-w {
-      padding: 16px 32px; background: transparent; color: var(--cream);
-      font-family: var(--fm); font-size: 12px; font-weight: 700;
-      letter-spacing: .07em; text-transform: uppercase;
-      text-decoration: none; border: 2px solid var(--cream);
-      transition: background .15s, color .15s;
-    }
-    .btn-ghost-w:hover { background: var(--cream); color: var(--red); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink); border-top: var(--brd);
-      padding: 48px 56px 32px;
-      margin-left: 0;
-    }
-    .ft-row {
-      display: grid; grid-template-columns: 2fr 1fr 1fr;
-      gap: 48px; margin-bottom: 40px;
-    }
-    .ft-logo {
-      display: flex; align-items: center; gap: 9px;
-      text-decoration: none; color: var(--cream); margin-bottom: 14px; line-height: 1;
-    }
-    .ft-logo .logo-mark { width: 30px; height: 30px; }
-    .ft-logo .logo-word { font-size: 19px; }
-    .ft-brand p { font-size: 13px; color: rgba(242,237,227,.5); line-height: 1.7; max-width: 280px; }
-    .ft-col h5 {
-      font-family: var(--fm); font-size: 10px; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-      color: rgba(242,237,227,.4); margin-bottom: 20px;
-    }
-    .ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-    .ft-col a { font-size: 13px; color: rgba(242,237,227,.6); text-decoration: none; transition: color .15s; }
-    .ft-col a:hover { color: var(--cream); }
-    .ft-bottom {
-      display: flex; justify-content: space-between; align-items: center;
-      padding-top: 24px; border-top: 1px solid rgba(242,237,227,.1);
-      font-family: var(--fm); font-size: 10px; letter-spacing: .05em;
-      color: rgba(242,237,227,.3); text-transform: uppercase;
-    }
-
-    /* ── SCROLL REVEAL ── */
-    .rv { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-    .rv.in { opacity: 1; transform: none; }
-    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .sidenav { display: none; }
-      main { margin-left: 0; }
-      .mobile-nav {
-        display: flex !important;
-        position: sticky; top: 0; z-index: 200;
-        border-bottom: var(--brd); background: var(--cream);
-        padding: 16px 24px; justify-content: space-between; align-items: center;
-      }
-      .svc-header, .ai-grid, .proc-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr 1fr; }
-      .stat-box { border-right: none; border-bottom: var(--brd); }
-      .cta { grid-template-columns: 1fr; }
-      .hero, .services, .ai, .process { padding: 60px 24px; }
-      .hero-bottom { grid-template-columns: 1fr; }
-      .hero-actions { justify-content: flex-start; }
-      .ft-row { grid-template-columns: 1fr; }
-      footer { padding: 48px 24px 28px; }
-    }
-    .mobile-nav { display: none; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .ticker-track { animation: none; }
-      .rv { transition: none; opacity: 1; transform: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/illustrations.css">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 
-<!-- Mobile nav -->
 <nav class="mobile-nav" aria-label="Navegación">
-  <a href="#" class="logo-link" style="margin:0" aria-label="Helion">
+  <a href="/" class="logo-link" style="margin:0" aria-label="Helion">
     <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
       <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -401,16 +26,15 @@
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-      <circle cx="50" cy="50" r="21" fill="var(--solar)"/>
+      <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
     </svg>
     <span class="logo-word">HELION</span>
   </a>
-  <a href="#contacto" class="btn-fill" style="padding:10px 18px;font-size:11px">Hablemos →</a>
+  <a href="#contacto" class="btn-pill btn-pill--solid on-dark" style="padding:10px 18px;font-size:11px">Hablemos →</a>
 </nav>
 
-<!-- ── SIDE NAV ── -->
 <nav class="sidenav" aria-label="Navegación principal">
-  <a href="#" class="logo-link" aria-label="Helion">
+  <a href="/" class="logo-link" aria-label="Helion">
     <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
       <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -420,248 +44,129 @@
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
       <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-      <circle cx="50" cy="50" r="21" fill="var(--solar)"/>
+      <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
     </svg>
     <span class="logo-word">HELION</span>
   </a>
   <ul class="side-links" role="list">
-    <li><a href="#servicios"><span class="n">01</span> Servicios</a></li>
-    <li><a href="#ia"><span class="n">02</span> IA</a></li>
-    <li><a href="#proceso"><span class="n">03</span> Proceso</a></li>
-    <li><a href="#contacto"><span class="n">04</span> Contacto</a></li>
+    <li><a href="/" aria-current="page"><span class="n">00</span> Inicio</a></li>
+    <li><a href="web-plataformas.html"><span class="n">01</span> Web &amp; Plataformas</a></li>
+    <li><a href="inteligencia-artificial.html"><span class="n">02</span> Inteligencia Artificial</a></li>
+    <li><a href="sensorica-iot.html"><span class="n">03</span> Sensórica &amp; IoT</a></li>
   </ul>
-  <a href="#contacto" class="side-cta">Hablemos →</a>
+  <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Hablemos →</a>
 </nav>
 
 <main>
 
-<!-- ── HERO ── -->
-<section class="hero" aria-labelledby="h1">
+<section class="hero on-dark" aria-labelledby="h1">
   <div>
-    <div class="hero-bg-num" aria-hidden="true">H</div>
-    <div class="hero-tag">Ecuador · Tecnología</div>
+    <div class="eyebrow hero-tag">Ecuador · Tecnología</div>
     <h1 class="hero-h1" id="h1">
-      Desarrollamos<br>
-      <span class="hl">lo que</span><br>
-      tu empresa<br>
-      <span class="red">necesita.</span>
+      Tu empresa,<br>
+      <span class="accent">pensada</span> de nuevo<br>
+      en software.
     </h1>
   </div>
   <div class="hero-bottom">
-    <p class="hero-sub">Software a medida, IA aplicada y consultoría tecnológica para empresas que no se conforman con plantillas genéricas.</p>
+    <p class="hero-sub">Software a medida, IA aplicada y tecnología de hardware para empresas que no se conforman con plantillas genéricas.</p>
     <div class="hero-actions">
-      <a href="#servicios" class="btn-outline">Ver servicios</a>
-      <a href="#contacto" class="btn-fill">Iniciar proyecto →</a>
+      <a href="#campos" class="btn-pill btn-pill--outline on-dark">Ver campos de trabajo</a>
+      <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Iniciar proyecto →</a>
     </div>
   </div>
 </section>
 
-<!-- ── TICKER ── -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <div class="t-i">Software a Medida <span class="t-sep">✦</span></div>
+    <div class="t-i">ERP <span class="t-sep">✦</span></div>
+    <div class="t-i">CRM <span class="t-sep">✦</span></div>
     <div class="t-i">Apps Móviles <span class="t-sep">✦</span></div>
-    <div class="t-i">Chatbots IA <span class="t-sep">✦</span></div>
-    <div class="t-i">Agentes de Voz <span class="t-sep">✦</span></div>
-    <div class="t-i">Automatizaciones <span class="t-sep">✦</span></div>
+    <div class="t-i">Agentes IA <span class="t-sep">✦</span></div>
+    <div class="t-i">Chatbots <span class="t-sep">✦</span></div>
+    <div class="t-i">Sensórica <span class="t-sep">✦</span></div>
+    <div class="t-i">IoT <span class="t-sep">✦</span></div>
+    <div class="t-i">Web &amp; SaaS <span class="t-sep">✦</span></div>
     <div class="t-i">Consultoría Tech <span class="t-sep">✦</span></div>
-    <div class="t-i">ERPs y CRMs <span class="t-sep">✦</span></div>
-    <div class="t-i">Business Intelligence <span class="t-sep">✦</span></div>
-    <div class="t-i">Software a Medida <span class="t-sep">✦</span></div>
+    <div class="t-i">ERP <span class="t-sep">✦</span></div>
+    <div class="t-i">CRM <span class="t-sep">✦</span></div>
     <div class="t-i">Apps Móviles <span class="t-sep">✦</span></div>
-    <div class="t-i">Chatbots IA <span class="t-sep">✦</span></div>
-    <div class="t-i">Agentes de Voz <span class="t-sep">✦</span></div>
-    <div class="t-i">Automatizaciones <span class="t-sep">✦</span></div>
+    <div class="t-i">Agentes IA <span class="t-sep">✦</span></div>
+    <div class="t-i">Chatbots <span class="t-sep">✦</span></div>
+    <div class="t-i">Sensórica <span class="t-sep">✦</span></div>
+    <div class="t-i">IoT <span class="t-sep">✦</span></div>
+    <div class="t-i">Web &amp; SaaS <span class="t-sep">✦</span></div>
     <div class="t-i">Consultoría Tech <span class="t-sep">✦</span></div>
-    <div class="t-i">ERPs y CRMs <span class="t-sep">✦</span></div>
-    <div class="t-i">Business Intelligence <span class="t-sep">✦</span></div>
   </div>
 </div>
 
-<!-- ── SERVICES ── -->
-<section class="services" id="servicios" aria-labelledby="svc-h">
-  <div class="svc-header">
-    <div>
-      <div class="section-label">Servicios</div>
-      <h2 class="sec-h2 rv" id="svc-h">Un equipo.<br>Todas las soluciones.</h2>
-    </div>
-    <p class="rv">Desde la primera línea de código hasta el despliegue final. Sin intermediarios, sin plantillas, sin compromisos.</p>
+<section class="fields section-pad on-dark" id="campos" aria-labelledby="fields-h">
+  <div class="fields-head">
+    <div class="eyebrow rv">Campos de trabajo</div>
+    <h2 class="sec-h2 rv" id="fields-h">Tres formas de construir<br>tu ventaja.</h2>
+    <p class="rv">Elige el campo que más se acerca a lo que necesitas — cada uno tiene su propio espacio con todo el detalle.</p>
   </div>
-  <table class="svc-table" role="list">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Servicio</th>
-        <th>Descripción</th>
-        <th>Especialidades</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="rv" role="listitem">
-        <td class="td-num">01</td>
-        <td class="td-name">Software<br>a Medida</td>
-        <td class="td-desc">ERPs, CRMs y plataformas desarrolladas exactamente para tu operación.</td>
-        <td class="td-tags">
-          <span class="td-tag">ERP</span><span class="td-tag">CRM</span><span class="td-tag">Plataformas</span>
-        </td>
-      </tr>
-      <tr class="rv" role="listitem">
-        <td class="td-num">02</td>
-        <td class="td-name">Aplicaciones<br>Móviles</td>
-        <td class="td-desc">Apps iOS y Android que tu equipo y clientes querrán usar todos los días.</td>
-        <td class="td-tags">
-          <span class="td-tag">iOS</span><span class="td-tag">Android</span><span class="td-tag">Cross-platform</span>
-        </td>
-      </tr>
-      <tr class="rv" role="listitem">
-        <td class="td-num">03</td>
-        <td class="td-name">Soluciones<br>Web</td>
-        <td class="td-desc">Desde landing pages de alta conversión hasta plataformas SaaS completas.</td>
-        <td class="td-tags">
-          <span class="td-tag">SaaS</span><span class="td-tag">E-commerce</span><span class="td-tag">Portales</span>
-        </td>
-      </tr>
-      <tr class="rv" role="listitem">
-        <td class="td-num">04</td>
-        <td class="td-name">Automatizaciones</td>
-        <td class="td-desc">Eliminamos el trabajo manual repetitivo. Más producción, menos errores.</td>
-        <td class="td-tags">
-          <span class="td-tag">Workflows</span><span class="td-tag">Integraciones</span>
-        </td>
-      </tr>
-      <tr class="rv" role="listitem">
-        <td class="td-num">05</td>
-        <td class="td-name">Inteligencia<br>Artificial</td>
-        <td class="td-desc">Chatbots, agentes de voz y motores de automatización entrenados en tu negocio.</td>
-        <td class="td-tags">
-          <span class="td-tag">Chatbots</span><span class="td-tag">Voz</span><span class="td-tag">LLMs</span>
-        </td>
-      </tr>
-      <tr class="rv" role="listitem">
-        <td class="td-num">06</td>
-        <td class="td-name">Consultoría<br>Tecnológica</td>
-        <td class="td-desc">Auditamos tus sistemas y diseñamos la hoja de ruta que tu empresa necesita.</td>
-        <td class="td-tags">
-          <span class="td-tag">Auditoría</span><span class="td-tag">Roadmap</span><span class="td-tag">Estrategia</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="fields-grid">
+    <a href="web-plataformas.html" class="field-card rv">
+      <div class="ill-box" id="ill-network"></div>
+      <h3>Web &amp; Plataformas</h3>
+      <p>ERPs, CRMs, sistemas a medida, apps móviles y plataformas web — con IA integrada.</p>
+      <span class="go">Explorar →</span>
+    </a>
+    <a href="inteligencia-artificial.html" class="field-card rv d1">
+      <div class="ill-box" id="ill-orbit"></div>
+      <h3>Inteligencia Artificial</h3>
+      <p>Agentes dedicados, chatbots, analizadores internos e integraciones IA.</p>
+      <span class="go">Explorar →</span>
+    </a>
+    <a href="sensorica-iot.html" class="field-card rv d2">
+      <div class="ill-box" id="ill-device"></div>
+      <h3>Sensórica &amp; IoT</h3>
+      <p>Hardware, plataforma de gestión e IA predictiva, de punta a punta.</p>
+      <span class="go">Explorar →</span>
+    </a>
+  </div>
 </section>
 
-<!-- ── PILLARS ── -->
-<div class="stats" role="region" aria-label="Por qué Helion">
-  <div class="stat-box rv">
-    <div class="stat-n">Velocidad <em>real</em></div>
-    <div class="stat-l">Avanzamos mientras otros todavía planifican.</div>
-  </div>
-  <div class="stat-box rv d1">
-    <div class="stat-n">Hablas con <em>quien desarrolla</em></div>
-    <div class="stat-l">Sin cuentas, sin intermediarios, sin teléfono descompuesto.</div>
-  </div>
-  <div class="stat-box rv d2">
-    <div class="stat-n">El código es <em>tuyo, siempre</em></div>
-    <div class="stat-l">Sin dependencias ocultas ni licencias que te aten a nosotros.</div>
-  </div>
-  <div class="stat-box rv d3">
-    <div class="stat-n"><em>100%</em> a medida</div>
-    <div class="stat-l">Nada de plantillas genéricas. Cada solución es única como tu negocio.</div>
-  </div>
-</div>
-
-<!-- ── AI ── -->
-<section class="ai" id="ia" aria-labelledby="ai-h">
-  <div class="ai-grid">
-    <div class="ai-visual rv" aria-hidden="true">
-      <div class="ai-grid-art" id="gridArt"></div>
+<section class="range section-pad" aria-labelledby="range-h">
+  <div class="eyebrow rv">Más allá de los tres campos</div>
+  <h2 class="sec-h2 rv" id="range-h">Si es software, hardware o <span class="accent">inteligencia</span>, probablemente lo construimos.</h2>
+  <div class="range-row">
+    <div class="range-chips rv">
+      <div class="range-chip"><div><h5>Consultoría Tecnológica</h5><p>Auditamos y diseñamos tu hoja de ruta.</p></div></div>
     </div>
-    <div class="ai-copy rv d2">
-      <div class="section-label">IA &amp; Automatización</div>
-      <h2 class="sec-h2" id="ai-h">Inteligencia<br>real. Sin humo.</h2>
-      <p>Encontramos los puntos exactos donde la IA genera valor en tu negocio — y los desarrollamos. Sin promesas vacías.</p>
-      <ul class="ai-list" role="list">
-        <li role="listitem">
-          <span class="li-n">01</span>
-          <div>
-            <h4>Chatbots Inteligentes</h4>
-            <p>Atención 24/7 entrenada con el conocimiento de tu empresa. Respuestas reales, no respuestas genéricas.</p>
-          </div>
-        </li>
-        <li role="listitem">
-          <span class="li-n">02</span>
-          <div>
-            <h4>Agentes de Voz</h4>
-            <p>Llamadas gestionadas por IA. Agendan, califican y responden sin intervención humana.</p>
-          </div>
-        </li>
-        <li role="listitem">
-          <span class="li-n">03</span>
-          <div>
-            <h4>Motores de Automatización</h4>
-            <p>Workflows inteligentes que eliminan el trabajo repetitivo y reducen errores operativos.</p>
-          </div>
-        </li>
-      </ul>
+    <div class="range-stats rv d1">
+      <div class="range-stat"><div class="n" data-counter-target="0">0</div><div class="l">plantillas genéricas — todo a medida</div></div>
+      <div class="range-stat"><div class="n" data-counter-target="100" data-counter-suffix="%">0%</div><div class="l">del código es tuyo, siempre</div></div>
+      <div class="range-stat"><div class="n" data-counter-target="1">0</div><div class="l">equipo, sin intermediarios ni subcontratos</div></div>
+      <div class="range-stat"><div class="n">24/7</div><div class="l">soporte tras el despliegue</div></div>
     </div>
   </div>
 </section>
 
-<!-- ── PROCESS ── -->
-<section class="process" id="proceso" aria-labelledby="proc-h">
-  <div class="proc-grid">
-    <div>
-      <div class="section-label rv">Cómo trabajamos</div>
-      <h2 class="sec-h2 rv" id="proc-h">Del problema<br>al sistema.</h2>
-    </div>
-    <ul class="steps-list rv" role="list">
-      <li class="step-li" role="listitem">
-        <span class="step-num">01</span>
-        <div>
-          <h4>Diagnóstico</h4>
-          <p>Escuchamos, preguntamos y mapeamos tu operación actual antes de escribir una sola línea de código.</p>
-        </div>
-      </li>
-      <li class="step-li" role="listitem">
-        <span class="step-num">02</span>
-        <div>
-          <h4>Diseño</h4>
-          <p>Arquitectura, flujos y prototipos — contigo, no para ti. Validamos antes de desarrollar.</p>
-        </div>
-      </li>
-      <li class="step-li" role="listitem">
-        <span class="step-num">03</span>
-        <div>
-          <h4>Desarrollo</h4>
-          <p>Iteraciones cortas, demos frecuentes y código que puedes entender y mantener.</p>
-        </div>
-      </li>
-      <li class="step-li" role="listitem">
-        <span class="step-num">04</span>
-        <div>
-          <h4>Despliegue &amp; Soporte</h4>
-          <p>Lanzamos, monitoreamos y permanecemos. Tu tecnología es responsabilidad nuestra.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+<section class="process section-pad on-dark" id="proceso" aria-labelledby="proc-h">
+  <div class="eyebrow rv">Cómo trabajamos</div>
+  <h2 class="sec-h2 rv" id="proc-h">Del problema<br>al sistema.</h2>
+  <ul class="steps-list rv" role="list">
+    <li class="step-li"><span class="step-num">01</span><div><h4>Diagnóstico</h4><p>Escuchamos, preguntamos y mapeamos tu operación antes de escribir una sola línea de código.</p></div></li>
+    <li class="step-li"><span class="step-num">02</span><div><h4>Diseño</h4><p>Arquitectura, flujos y prototipos — contigo, no para ti.</p></div></li>
+    <li class="step-li"><span class="step-num">03</span><div><h4>Desarrollo</h4><p>Iteraciones cortas, demos frecuentes y código que puedes mantener.</p></div></li>
+    <li class="step-li"><span class="step-num">04</span><div><h4>Despliegue &amp; Soporte</h4><p>Lanzamos, monitoreamos y permanecemos.</p></div></li>
+  </ul>
 </section>
 
-<!-- ── CTA ── -->
 <section class="cta" id="contacto" aria-labelledby="cta-h">
-  <div>
-    <h2 class="rv" id="cta-h">¿Listo para<br>desarrollar <em>algo real?</em></h2>
-  </div>
+  <div><h2 class="rv" id="cta-h">¿Listo para<br>desarrollar <span class="accent" style="color:var(--ink)">algo real?</span></h2></div>
   <div class="cta-right rv">
-    <a href="mailto:hola@helion.ec" class="btn-white">Escribir ahora →</a>
-    <a href="#servicios" class="btn-ghost-w">Ver servicios</a>
+    <a href="mailto:hola@helion.ec" class="btn-pill btn-pill--outline" style="border-color:var(--paper);color:var(--paper)">Escribir ahora →</a>
+    <a href="#campos" class="btn-pill btn-pill--outline" style="border-color:var(--paper);color:var(--paper)">Ver campos de trabajo</a>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div class="ft-row">
     <div class="ft-brand">
-      <a href="#" class="ft-logo" aria-label="Helion">
+      <a href="/" class="ft-logo" aria-label="Helion">
         <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
           <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -671,79 +176,46 @@
           <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
           <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
           <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-          <circle cx="50" cy="50" r="21" fill="var(--solar)"/>
+          <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
         </svg>
         <span class="logo-word">HELION</span>
       </a>
-      <p>Software a medida, IA aplicada y consultoría tecnológica para empresas en Ecuador y el mundo.</p>
+      <p>Software a medida, IA aplicada y tecnología de hardware para empresas en Ecuador y el mundo.</p>
     </div>
     <div class="ft-col">
-      <h5>Servicios</h5>
+      <h5>Campos</h5>
       <ul>
-        <li><a href="#servicios">Software a Medida</a></li>
-        <li><a href="#servicios">Apps Móviles</a></li>
-        <li><a href="#servicios">Soluciones Web</a></li>
-        <li><a href="#servicios">Automatizaciones</a></li>
+        <li><a href="web-plataformas.html">Web &amp; Plataformas</a></li>
+        <li><a href="inteligencia-artificial.html">Inteligencia Artificial</a></li>
+        <li><a href="sensorica-iot.html">Sensórica &amp; IoT</a></li>
       </ul>
     </div>
     <div class="ft-col">
       <h5>Empresa</h5>
       <ul>
-        <li><a href="#ia">IA &amp; Automatización</a></li>
         <li><a href="#proceso">Cómo trabajamos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bottom">
-    <span>© 2025 Helion Technology. Ecuador.</span>
+    <span>© 2026 Helion Technology. Ecuador.</span>
     <span>DESARROLLADO CON PRECISIÓN.</span>
   </div>
 </footer>
 
 </main>
 
-<script>
-  /* Scroll reveal */
-  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} }), {threshold:.08, rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+<script type="module">
+  import { bootstrapCommon } from './assets/js/main.js';
+  import { mountNetwork } from './assets/js/illustrations/network.js';
+  import { mountOrbit } from './assets/js/illustrations/orbit.js';
+  import { mountDevice } from './assets/js/illustrations/device.js';
 
-  /* Smooth scroll */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const t = document.querySelector(a.getAttribute('href'));
-      if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
-    });
-  });
-
-  /* Animated grid art */
-  const art = document.getElementById('gridArt');
-  if (art) {
-    const pattern = [
-      0,0,0,1,1,0,0,0,
-      0,0,1,2,2,1,0,0,
-      0,1,2,3,3,2,1,0,
-      1,2,3,3,3,3,2,1,
-      1,2,3,3,3,3,2,1,
-      0,1,2,3,3,2,1,0,
-      0,0,1,2,2,1,0,0,
-      0,0,0,1,1,0,0,0,
-    ];
-    const cls = ['', 'glo', 'mid', 'lit'];
-    pattern.forEach(v => {
-      const c = document.createElement('div');
-      c.className = 'cell ' + (cls[v] || '');
-      art.appendChild(c);
-    });
-
-    /* Animate: random cell flicker */
-    setInterval(() => {
-      const cells = art.querySelectorAll('.cell.lit, .cell.glo');
-      cells.forEach(c => {
-        if (Math.random() > 0.7) c.style.opacity = Math.random() > 0.5 ? '1' : '0.4';
-      });
-    }, 600);
-  }
+  bootstrapCommon();
+  mountNetwork(document.getElementById('ill-network'), { onDark: true });
+  mountOrbit(document.getElementById('ill-orbit'), { onDark: true });
+  mountDevice(document.getElementById('ill-device'), { onDark: true });
 </script>
 </body>
 </html>
