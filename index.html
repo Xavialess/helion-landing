@@ -16,7 +16,7 @@
 <body>
 
 <nav class="mobile-nav" aria-label="Navegación">
-  <a href="/" class="logo-link" style="margin:0" aria-label="Helion">
+  <a href="index.html" class="logo-link" style="margin:0" aria-label="Helion">
     <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
       <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -30,11 +30,16 @@
     </svg>
     <span class="logo-word">HELION</span>
   </a>
+  <div class="mobile-nav-links">
+    <a href="web-plataformas.html">Web</a>
+    <a href="inteligencia-artificial.html">IA</a>
+    <a href="sensorica-iot.html">IoT</a>
+  </div>
   <a href="#contacto" class="btn-pill btn-pill--solid on-dark" style="padding:10px 18px;font-size:11px">Hablemos →</a>
 </nav>
 
 <nav class="sidenav" aria-label="Navegación principal">
-  <a href="/" class="logo-link" aria-label="Helion">
+  <a href="index.html" class="logo-link" aria-label="Helion">
     <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
       <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -49,7 +54,7 @@
     <span class="logo-word">HELION</span>
   </a>
   <ul class="side-links" role="list">
-    <li><a href="/" aria-current="page"><span class="n">00</span> Inicio</a></li>
+    <li><a href="index.html" aria-current="page"><span class="n">00</span> Inicio</a></li>
     <li><a href="web-plataformas.html"><span class="n">01</span> Web &amp; Plataformas</a></li>
     <li><a href="inteligencia-artificial.html"><span class="n">02</span> Inteligencia Artificial</a></li>
     <li><a href="sensorica-iot.html"><span class="n">03</span> Sensórica &amp; IoT</a></li>
@@ -163,10 +168,12 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="ft-row">
     <div class="ft-brand">
-      <a href="/" class="ft-logo" aria-label="Helion">
+      <a href="index.html" class="ft-logo" aria-label="Helion">
         <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
           <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
@@ -203,8 +210,6 @@
     <span>DESARROLLADO CON PRECISIÓN.</span>
   </div>
 </footer>
-
-</main>
 
 <script type="module">
   import { bootstrapCommon } from './assets/js/main.js';
