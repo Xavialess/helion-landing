@@ -136,14 +136,17 @@
 
 <script type="module">
   import { bootstrapCommon } from './assets/js/main.js';
-  import { mountNetwork } from './assets/js/illustrations/network.js';
   import { mountOrbit } from './assets/js/illustrations/orbit.js';
+  import { mountIconErp } from './assets/js/illustrations/icon-erp.js';
+  import { mountIconCrm } from './assets/js/illustrations/icon-crm.js';
+  import { mountIconCustom } from './assets/js/illustrations/icon-custom.js';
+  import { mountIconMobile } from './assets/js/illustrations/icon-mobile.js';
 
   bootstrapCommon();
-  mountNetwork(document.getElementById('cap-erp'), { onDark: false });
-  mountNetwork(document.getElementById('cap-crm'), { onDark: false });
-  mountNetwork(document.getElementById('cap-custom'), { onDark: false });
-  mountNetwork(document.getElementById('cap-mobile'), { onDark: false });
+  mountIconErp(document.getElementById('cap-erp'), { onDark: false });
+  mountIconCrm(document.getElementById('cap-crm'), { onDark: false });
+  mountIconCustom(document.getElementById('cap-custom'), { onDark: false });
+  mountIconMobile(document.getElementById('cap-mobile'), { onDark: false });
   mountOrbit(document.getElementById('cap-ai'), { onDark: true });
 </script>
 </body>

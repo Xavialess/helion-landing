@@ -83,3 +83,63 @@
   .ill-dashboard .bar { animation: none; }
   .ill-dashboard .line { animation: none; stroke-dashoffset: 0; }
 }
+
+/* ERP — unified panel, modules with live indicators */
+.ill-erp .frame { stroke: var(--red); stroke-width: 1.5; fill: none; opacity: .5; }
+.ill-erp.ill--on-dark .frame { stroke: var(--red-glow); }
+.ill-erp .module { stroke: var(--red); stroke-width: 1; fill: none; opacity: .35; }
+.ill-erp.ill--on-dark .module { stroke: var(--red-glow); }
+.ill-erp .led { fill: var(--red); animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-erp.ill--on-dark .led { fill: var(--red-glow); }
+.ill-erp .led--2 { animation-delay: .25s; }
+.ill-erp .led--3 { animation-delay: .5s; }
+.ill-erp .led--4 { animation-delay: .75s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-erp .led { animation: none; opacity: 1; }
+}
+
+/* CRM — pipeline narrowing through stages */
+.ill-crm .link { stroke: var(--red); stroke-width: 1; opacity: .4; }
+.ill-crm.ill--on-dark .link { stroke: var(--red-glow); }
+.ill-crm .stage { fill: var(--red); animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-crm.ill--on-dark .stage { fill: var(--red-glow); }
+.ill-crm .stage--2 { animation-delay: .25s; }
+.ill-crm .stage--3 { animation-delay: .5s; }
+.ill-crm .stage--4 { animation-delay: .75s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-crm .stage { animation: none; opacity: 1; }
+}
+
+/* Sistemas a Medida — asymmetric blocks assembling */
+.ill-custom .block { stroke: var(--red); stroke-width: 1.5; fill: none; transform-box: fill-box; transform-origin: center; animation: ill-float 3.2s ease-in-out infinite; }
+.ill-custom.ill--on-dark .block { stroke: var(--red-glow); }
+.ill-custom .block--2 { animation-delay: .4s; }
+.ill-custom .block--3 { animation-delay: .8s; }
+.ill-custom .pin { fill: var(--red); }
+.ill-custom.ill--on-dark .pin { fill: var(--red-glow); }
+
+@keyframes ill-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-custom .block { animation: none; }
+}
+
+/* Apps Móviles & Web — phone + browser, live on both */
+.ill-mobile .body { stroke: var(--red); stroke-width: 1.5; fill: none; }
+.ill-mobile.ill--on-dark .body { stroke: var(--red-glow); }
+.ill-mobile .chrome { stroke: var(--red); stroke-width: 1; opacity: .5; }
+.ill-mobile.ill--on-dark .chrome { stroke: var(--red-glow); }
+.ill-mobile .dot { fill: var(--red); opacity: .5; }
+.ill-mobile.ill--on-dark .dot { fill: var(--red-glow); }
+.ill-mobile .screen { fill: var(--red); animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-mobile.ill--on-dark .screen { fill: var(--red-glow); }
+.ill-mobile .screen--b { animation-delay: .5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-mobile .screen { animation: none; opacity: 1; }
+}
