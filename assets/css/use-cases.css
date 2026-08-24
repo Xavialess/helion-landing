@@ -38,11 +38,8 @@
 .explorer-chip:hover { border-color: var(--red-glow); transform: translateY(-2px); }
 .explorer-chip[aria-pressed="true"] { background: var(--red-glow); border-color: var(--red-glow); color: var(--ink-dark); font-weight: 700; }
 
-.explorer-chips--toggle .explorer-chip { padding: 16px 32px; font-size: 15px; }
-
 .explorer-result-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .result-card {
-  position: relative;
   border: 1px solid rgba(245, 243, 236, .1); border-radius: 16px; padding: 24px;
   display: flex; flex-direction: column; gap: 14px;
   opacity: 0; transform: translateY(16px);
@@ -54,13 +51,6 @@
 .result-card h4 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
 .result-card p { font-size: 12.5px; color: var(--gray-on-dark); line-height: 1.65; flex: 1; }
 .result-link { font-family: var(--fm); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--red-glow); text-decoration: none; }
-
-.result-badge {
-  position: absolute; top: -11px; left: 20px;
-  background: var(--red-glow); color: var(--ink-dark);
-  font-family: var(--fm); font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  padding: 5px 10px; border-radius: var(--radius-pill);
-}
 
 .explorer-result-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
 .explorer-reset { font-family: var(--fm); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-on-dark); background: none; border: none; cursor: pointer; padding: 8px 0; }
@@ -74,8 +64,6 @@
 
 @media (max-width: 560px) {
   .explorer-result-grid { grid-template-columns: 1fr; }
-  .explorer-chips--toggle { flex-direction: column; }
-  .explorer-chips--toggle .explorer-chip { width: 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
