@@ -137,14 +137,17 @@
 
 <script type="module">
   import { bootstrapCommon } from './assets/js/main.js';
-  import { mountOrbit } from './assets/js/illustrations/orbit.js';
   import { mountNetwork } from './assets/js/illustrations/network.js';
+  import { mountIconAgent } from './assets/js/illustrations/icon-agent.js';
+  import { mountIconChat } from './assets/js/illustrations/icon-chat.js';
+  import { mountIconAnalyze } from './assets/js/illustrations/icon-analyze.js';
+  import { mountIconIntegrate } from './assets/js/illustrations/icon-integrate.js';
 
   bootstrapCommon();
-  mountOrbit(document.getElementById('cap-agents'), { onDark: false });
-  mountOrbit(document.getElementById('cap-chat'), { onDark: false });
-  mountOrbit(document.getElementById('cap-analyzers'), { onDark: false });
-  mountOrbit(document.getElementById('cap-integrations'), { onDark: false });
+  mountIconAgent(document.getElementById('cap-agents'), { onDark: false });
+  mountIconChat(document.getElementById('cap-chat'), { onDark: false });
+  mountIconAnalyze(document.getElementById('cap-analyzers'), { onDark: false });
+  mountIconIntegrate(document.getElementById('cap-integrations'), { onDark: false });
   mountNetwork(document.getElementById('cap-everywhere'), { onDark: true });
 </script>
 </body>

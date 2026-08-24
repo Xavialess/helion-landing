@@ -143,3 +143,65 @@
 @media (prefers-reduced-motion: reduce) {
   .ill-mobile .screen { animation: none; opacity: 1; }
 }
+
+/* Agentes Dedicados — one agent, always-on signal, role badge */
+.ill-agent .core { fill: var(--red); }
+.ill-agent.ill--on-dark .core { fill: var(--red-glow); }
+.ill-agent .ring { stroke: var(--red); stroke-width: 1; fill: none; transform-box: fill-box; transform-origin: center; animation: ill-signal 2.6s ease-out infinite; }
+.ill-agent.ill--on-dark .ring { stroke: var(--red-glow); }
+.ill-agent .ring--2 { animation-delay: .8s; }
+.ill-agent .badge { stroke: var(--red); stroke-width: 1.2; fill: none; opacity: .6; }
+.ill-agent.ill--on-dark .badge { stroke: var(--red-glow); }
+.ill-agent .badge-dot { fill: var(--red); animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-agent.ill--on-dark .badge-dot { fill: var(--red-glow); }
+
+@keyframes ill-signal {
+  0% { opacity: .6; transform: scale(.7); }
+  100% { opacity: 0; transform: scale(1.3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-agent .ring { animation: none; opacity: 0; }
+  .ill-agent .badge-dot { animation: none; opacity: 1; }
+}
+
+/* Chatbots & Atención al Cliente — conversation with a typing indicator */
+.ill-chat .bubble { stroke: var(--red); stroke-width: 1.5; fill: none; }
+.ill-chat.ill--on-dark .bubble { stroke: var(--red-glow); }
+.ill-chat .dot { fill: var(--red); animation: ill-pulse 1.6s ease-in-out infinite; }
+.ill-chat.ill--on-dark .dot { fill: var(--red-glow); }
+.ill-chat .dot--2 { animation-delay: .2s; }
+.ill-chat .dot--3 { animation-delay: .4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-chat .dot { animation: none; opacity: 1; }
+}
+
+/* Analizadores Internos — histogram read by a magnifying glass */
+.ill-analyze .bar { fill: var(--red); opacity: .55; animation: ill-bar 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+.ill-analyze.ill--on-dark .bar { fill: var(--red-glow); }
+.ill-analyze .bar--2 { animation-delay: .2s; }
+.ill-analyze .bar--3 { animation-delay: .4s; }
+.ill-analyze .bar--4 { animation-delay: .6s; }
+.ill-analyze .lens { stroke: var(--red); stroke-width: 1.5; fill: none; }
+.ill-analyze.ill--on-dark .lens { stroke: var(--red-glow); }
+.ill-analyze .handle { stroke: var(--red); stroke-width: 2; stroke-linecap: round; }
+.ill-analyze.ill--on-dark .handle { stroke: var(--red-glow); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-analyze .bar { animation: none; }
+}
+
+/* Integraciones IA — one core, connected to systems of different shapes */
+.ill-integrate .core { fill: var(--red); }
+.ill-integrate.ill--on-dark .core { fill: var(--red-glow); }
+.ill-integrate .link { stroke: var(--red); stroke-width: 1; opacity: .4; }
+.ill-integrate.ill--on-dark .link { stroke: var(--red-glow); }
+.ill-integrate .target { stroke: var(--red); stroke-width: 1.5; fill: none; animation: ill-pulse 2.4s ease-in-out infinite; }
+.ill-integrate.ill--on-dark .target { stroke: var(--red-glow); }
+.ill-integrate .target--2 { animation-delay: .3s; }
+.ill-integrate .target--3 { animation-delay: .6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ill-integrate .target { animation: none; opacity: 1; }
+}
