@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/illustrations.css">
   <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/use-cases.css">
 </head>
 <body>
 
@@ -149,6 +150,36 @@
   </div>
 </section>
 
+<section class="explorer section-pad" id="explora" aria-labelledby="explora-h">
+  <div class="explorer-head">
+    <div class="eyebrow rv">Encuentra tu camino</div>
+    <h2 class="sec-h2 rv" id="explora-h">¿Qué necesita<br><span class="accent">tu</span> negocio?</h2>
+    <p class="rv">Cuéntanos qué haces y en qué punto estás — te mostramos, en segundos, por dónde empezaríamos contigo.</p>
+  </div>
+
+  <div class="explorer-panel rv d1" data-explorer>
+    <ol class="explorer-steps" aria-hidden="true">
+      <li class="explorer-step is-active" data-step-indicator="1"><span class="n">01</span> Tu negocio</li>
+      <li class="explorer-step" data-step-indicator="2"><span class="n">02</span> Tu camino</li>
+    </ol>
+
+    <div class="explorer-stage">
+      <div class="explorer-q" data-step="1">
+        <h3>¿A qué se dedica tu negocio?</h3>
+        <div class="explorer-chips" role="group" aria-label="Tipo de negocio" data-industry-group></div>
+      </div>
+
+      <div class="explorer-result" data-step="2" hidden aria-live="polite">
+        <div class="explorer-result-grid" data-result-grid></div>
+        <div class="explorer-result-foot">
+          <button type="button" class="explorer-reset" data-reset>‹ Empezar de nuevo</button>
+          <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Hablemos de esto →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="process section-pad on-dark" id="proceso" aria-labelledby="proc-h">
   <div class="eyebrow rv">Cómo trabajamos</div>
   <h2 class="sec-h2 rv" id="proc-h">Del problema<br>al sistema.</h2>
@@ -200,6 +231,7 @@
     <div class="ft-col">
       <h5>Empresa</h5>
       <ul>
+        <li><a href="#explora">Encuentra tu camino</a></li>
         <li><a href="#proceso">Cómo trabajamos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -216,11 +248,13 @@
   import { mountNetwork } from './assets/js/illustrations/network.js';
   import { mountOrbit } from './assets/js/illustrations/orbit.js';
   import { mountDevice } from './assets/js/illustrations/device.js';
+  import { initUseCases } from './assets/js/use-cases.js';
 
   bootstrapCommon();
   mountNetwork(document.getElementById('ill-network'), { onDark: true });
   mountOrbit(document.getElementById('ill-orbit'), { onDark: true });
   mountDevice(document.getElementById('ill-device'), { onDark: true });
+  initUseCases();
 </script>
 </body>
 </html>
