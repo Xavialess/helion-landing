@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/illustrations.css">
   <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/use-cases.css">
 </head>
 <body>
 
@@ -74,7 +75,7 @@
     </h1>
   </div>
   <div class="hero-bottom">
-    <p class="hero-sub">Software a medida, IA aplicada y tecnología de hardware para empresas que no se conforman con plantillas genéricas.</p>
+    <p class="hero-sub">Software a medida, inteligencia artificial aplicada y tecnología de hardware, diseñados para las necesidades específicas de tu empresa.</p>
     <div class="hero-actions">
       <a href="#campos" class="btn-pill btn-pill--outline on-dark">Ver campos de trabajo</a>
       <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Iniciar proyecto →</a>
@@ -135,16 +136,46 @@
 
 <section class="range section-pad" aria-labelledby="range-h">
   <div class="eyebrow rv">Más allá de los tres campos</div>
-  <h2 class="sec-h2 rv" id="range-h">Si es software, hardware o <span class="accent">inteligencia</span>, probablemente lo construimos.</h2>
+  <h2 class="sec-h2 rv" id="range-h">Si es software, hardware o <span class="accent">inteligencia</span>, lo construimos.</h2>
   <div class="range-row">
     <div class="range-chips rv">
       <div class="range-chip"><div><h5>Consultoría Tecnológica</h5><p>Auditamos y diseñamos tu hoja de ruta.</p></div></div>
     </div>
     <div class="range-stats rv d1">
-      <div class="range-stat"><div class="n" data-counter-target="0">0</div><div class="l">plantillas genéricas — todo a medida</div></div>
+      <div class="range-stat"><div class="n" data-counter-target="3">0</div><div class="l">campos de trabajo: software, IA y hardware</div></div>
       <div class="range-stat"><div class="n" data-counter-target="100" data-counter-suffix="%">0%</div><div class="l">del código es tuyo, siempre</div></div>
       <div class="range-stat"><div class="n" data-counter-target="1">0</div><div class="l">equipo, sin intermediarios ni subcontratos</div></div>
       <div class="range-stat"><div class="n">24/7</div><div class="l">soporte tras el despliegue</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="explorer section-pad" id="explora" aria-labelledby="explora-h">
+  <div class="explorer-head">
+    <div class="eyebrow rv">Encuentra tu camino</div>
+    <h2 class="sec-h2 rv" id="explora-h">¿Qué necesita<br><span class="accent">tu</span> negocio?</h2>
+    <p class="rv">Cuéntanos qué haces y en qué punto estás — te mostramos, en segundos, por dónde empezaríamos contigo.</p>
+  </div>
+
+  <div class="explorer-panel rv d1" data-explorer>
+    <ol class="explorer-steps" aria-hidden="true">
+      <li class="explorer-step is-active" data-step-indicator="1"><span class="n">01</span> Tu negocio</li>
+      <li class="explorer-step" data-step-indicator="2"><span class="n">02</span> Tu camino</li>
+    </ol>
+
+    <div class="explorer-stage">
+      <div class="explorer-q" data-step="1">
+        <h3>¿A qué se dedica tu negocio?</h3>
+        <div class="explorer-chips" role="group" aria-label="Tipo de negocio" data-industry-group></div>
+      </div>
+
+      <div class="explorer-result" data-step="2" hidden aria-live="polite">
+        <div class="explorer-result-grid" data-result-grid></div>
+        <div class="explorer-result-foot">
+          <button type="button" class="explorer-reset" data-reset>‹ Empezar de nuevo</button>
+          <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Hablemos de esto →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -158,6 +189,23 @@
     <li class="step-li"><span class="step-num">03</span><div><h4>Desarrollo</h4><p>Iteraciones cortas, demos frecuentes y código que puedes mantener.</p></div></li>
     <li class="step-li"><span class="step-num">04</span><div><h4>Despliegue &amp; Soporte</h4><p>Lanzamos, monitoreamos y permanecemos.</p></div></li>
   </ul>
+</section>
+
+<section class="about section-pad" id="nosotros" aria-labelledby="about-h">
+  <div class="about-head">
+    <div class="eyebrow rv">Quiénes somos</div>
+    <h2 class="sec-h2 rv" id="about-h">Por qué <span class="accent">construimos</span><br>lo que construimos.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-card rv">
+      <h5>Misión</h5>
+      <p>Darle a cada empresa el software, la inteligencia artificial y el hardware que necesita para operar mejor — diseñado para su realidad, no adaptado desde una caja.</p>
+    </div>
+    <div class="about-card rv d1">
+      <h5>Visión</h5>
+      <p>Ser el equipo de tecnología de cabecera para negocios en Ecuador y la región — el primero al que llaman cuando algo se puede resolver con software, IA o hardware.</p>
+    </div>
+  </div>
 </section>
 
 <section class="cta" id="contacto" aria-labelledby="cta-h">
@@ -200,7 +248,9 @@
     <div class="ft-col">
       <h5>Empresa</h5>
       <ul>
+        <li><a href="#explora">Encuentra tu camino</a></li>
         <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#nosotros">Quiénes somos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -216,11 +266,13 @@
   import { mountNetwork } from './assets/js/illustrations/network.js';
   import { mountOrbit } from './assets/js/illustrations/orbit.js';
   import { mountDevice } from './assets/js/illustrations/device.js';
+  import { initUseCases } from './assets/js/use-cases.js';
 
   bootstrapCommon();
   mountNetwork(document.getElementById('ill-network'), { onDark: true });
   mountOrbit(document.getElementById('ill-orbit'), { onDark: true });
   mountDevice(document.getElementById('ill-device'), { onDark: true });
+  initUseCases();
 </script>
 </body>
 </html>

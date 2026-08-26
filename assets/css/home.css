@@ -37,6 +37,13 @@
 .step-li h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .step-li p { font-size: 13px; color: var(--gray-on-dark); line-height: 1.75; }
 
+.about { background: var(--cream); }
+.about-head { max-width: 640px; margin-bottom: 40px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.about-card { border: 1px solid rgba(17,17,17,.12); border-radius: 16px; padding: 32px; }
+.about-card h5 { font-family: var(--fm); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+.about-card p { font-size: 15px; line-height: 1.8; color: var(--ink); max-width: 440px; }
+
 .cta { padding: 100px 56px; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; background: var(--red); }
 .cta h2 { font-size: clamp(2.5rem, 5vw, 6rem); font-weight: 700; letter-spacing: -.04em; line-height: .97; color: var(--paper); }
 .cta-right { display: flex; flex-direction: column; gap: 14px; }
@@ -47,5 +54,6 @@
   .hero-actions { justify-content: flex-start; }
   .fields-grid { grid-template-columns: 1fr; }
   .range-row { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
   .cta { grid-template-columns: 1fr; }
 }
