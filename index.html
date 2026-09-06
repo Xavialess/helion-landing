@@ -1,281 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helion — Tecnología que transforma tu empresa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="assets/css/tokens.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/illustrations.css">
-  <link rel="stylesheet" href="assets/css/home.css">
-  <link rel="stylesheet" href="assets/css/use-cases.css">
-</head>
-<body>
-
-<nav class="mobile-nav" aria-label="Navegación">
-  <a href="/" class="logo-link" style="margin:0" aria-label="Helion">
-    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
-      <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
-      <rect x="6" y="43" width="18" height="14" fill="currentColor"/>
-      <rect x="76" y="43" width="18" height="14" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,24) rotate(45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-      <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
-    </svg>
-    <span class="logo-word">HELION</span>
-  </a>
-  <div class="mobile-nav-links">
-    <a href="web-plataformas">Web</a>
-    <a href="inteligencia-artificial">IA</a>
-    <a href="sensorica-iot">IoT</a>
-  </div>
-  <a href="#contacto" class="btn-pill btn-pill--solid on-dark" style="padding:10px 18px;font-size:11px">Hablemos →</a>
-</nav>
-
-<nav class="sidenav" aria-label="Navegación principal">
-  <a href="/" class="logo-link" aria-label="Helion">
-    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
-      <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
-      <rect x="6" y="43" width="18" height="14" fill="currentColor"/>
-      <rect x="76" y="43" width="18" height="14" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,24) rotate(45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
-      <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-      <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
-    </svg>
-    <span class="logo-word">HELION</span>
-  </a>
-  <ul class="side-links" role="list">
-    <li><a href="/" aria-current="page"><span class="n">00</span> Inicio</a></li>
-    <li><a href="web-plataformas"><span class="n">01</span> Web &amp; Plataformas</a></li>
-    <li><a href="inteligencia-artificial"><span class="n">02</span> Inteligencia Artificial</a></li>
-    <li><a href="sensorica-iot"><span class="n">03</span> Sensórica &amp; IoT</a></li>
-  </ul>
-  <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Hablemos →</a>
-</nav>
-
-<main>
-
-<section class="hero on-dark" aria-labelledby="h1">
-  <div>
-    <div class="eyebrow hero-tag">Ecuador · Tecnología</div>
-    <h1 class="hero-h1" id="h1">
-      Tu empresa,<br>
-      <span class="accent">pensada</span> de nuevo<br>
-      en software.
-    </h1>
-  </div>
-  <div class="hero-bottom">
-    <p class="hero-sub">Software a medida, inteligencia artificial aplicada y tecnología de hardware, diseñados para las necesidades específicas de tu empresa.</p>
-    <div class="hero-actions">
-      <a href="#campos" class="btn-pill btn-pill--outline on-dark">Ver campos de trabajo</a>
-      <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Iniciar proyecto →</a>
-    </div>
-  </div>
-</section>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <div class="t-i">ERP <span class="t-sep">✦</span></div>
-    <div class="t-i">CRM <span class="t-sep">✦</span></div>
-    <div class="t-i">Apps Móviles <span class="t-sep">✦</span></div>
-    <div class="t-i">Agentes IA <span class="t-sep">✦</span></div>
-    <div class="t-i">Chatbots <span class="t-sep">✦</span></div>
-    <div class="t-i">Sensórica <span class="t-sep">✦</span></div>
-    <div class="t-i">IoT <span class="t-sep">✦</span></div>
-    <div class="t-i">Web &amp; SaaS <span class="t-sep">✦</span></div>
-    <div class="t-i">Consultoría Tech <span class="t-sep">✦</span></div>
-    <div class="t-i">ERP <span class="t-sep">✦</span></div>
-    <div class="t-i">CRM <span class="t-sep">✦</span></div>
-    <div class="t-i">Apps Móviles <span class="t-sep">✦</span></div>
-    <div class="t-i">Agentes IA <span class="t-sep">✦</span></div>
-    <div class="t-i">Chatbots <span class="t-sep">✦</span></div>
-    <div class="t-i">Sensórica <span class="t-sep">✦</span></div>
-    <div class="t-i">IoT <span class="t-sep">✦</span></div>
-    <div class="t-i">Web &amp; SaaS <span class="t-sep">✦</span></div>
-    <div class="t-i">Consultoría Tech <span class="t-sep">✦</span></div>
-  </div>
-</div>
-
-<section class="fields section-pad on-dark" id="campos" aria-labelledby="fields-h">
-  <div class="fields-head">
-    <div class="eyebrow rv">¿Qué problema quieres resolver?</div>
-    <h2 class="sec-h2 rv" id="fields-h">Empieza por el problema,<br>no por la tecnología.</h2>
-    <p class="rv">Elige la pregunta que más se parece a la tuya — cada campo tiene su propio espacio con todo el detalle.</p>
-  </div>
-  <div class="fields-grid">
-    <a href="web-plataformas" class="field-card rv">
-      <div class="ill-box" id="ill-network"></div>
-      <span class="eyebrow">Web &amp; Plataformas</span>
-      <h3>¿Tu negocio necesita fidelizar clientes y ordenar su operación?</h3>
-      <p>ERPs, CRMs, sistemas a medida, apps móviles y plataformas web — con IA integrada.</p>
-      <span class="go">Explorar →</span>
-    </a>
-    <a href="inteligencia-artificial" class="field-card rv d1">
-      <div class="ill-box" id="ill-orbit"></div>
-      <span class="eyebrow">Inteligencia Artificial</span>
-      <h3>¿Quieres habilitar IA en tus aplicaciones de negocio?</h3>
-      <p>Agentes dedicados, chatbots, analizadores internos e integraciones IA.</p>
-      <span class="go">Explorar →</span>
-    </a>
-    <a href="sensorica-iot" class="field-card rv d2">
-      <div class="ill-box" id="ill-device"></div>
-      <span class="eyebrow">Sensórica &amp; IoT</span>
-      <h3>¿Necesitas monitorear y controlar tus equipos en tiempo real?</h3>
-      <p>Hardware, plataforma de gestión e IA predictiva, de punta a punta.</p>
-      <span class="go">Explorar →</span>
-    </a>
-  </div>
-</section>
-
-<section class="range section-pad" aria-labelledby="range-h">
-  <div class="eyebrow rv">Más allá de los tres campos</div>
-  <h2 class="sec-h2 rv" id="range-h">Si es software, hardware o <span class="accent">inteligencia</span>, lo construimos.</h2>
-  <div class="range-row">
-    <div class="range-chips rv">
-      <div class="range-chip"><div><h5>Consultoría Tecnológica</h5><p>Auditamos y diseñamos tu hoja de ruta.</p></div></div>
-    </div>
-    <div class="range-stats rv d1">
-      <div class="range-stat"><div class="n" data-counter-target="3">0</div><div class="l">campos de trabajo: software, IA y hardware</div></div>
-      <div class="range-stat"><div class="n" data-counter-target="100" data-counter-suffix="%">0%</div><div class="l">del código es tuyo, siempre</div></div>
-      <div class="range-stat"><div class="n" data-counter-target="1">0</div><div class="l">equipo, sin intermediarios ni subcontratos</div></div>
-      <div class="range-stat"><div class="n">24/7</div><div class="l">soporte tras el despliegue</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="explorer section-pad" id="explora" aria-labelledby="explora-h">
-  <div class="explorer-head">
-    <div class="eyebrow rv">Encuentra tu camino</div>
-    <h2 class="sec-h2 rv" id="explora-h">¿Qué necesita<br><span class="accent">tu</span> negocio?</h2>
-    <p class="rv">Cuéntanos qué haces y en qué punto estás — te mostramos, en segundos, por dónde empezaríamos contigo.</p>
-  </div>
-
-  <div class="explorer-panel rv d1" data-explorer>
-    <ol class="explorer-steps" aria-hidden="true">
-      <li class="explorer-step is-active" data-step-indicator="1"><span class="n">01</span> Tu negocio</li>
-      <li class="explorer-step" data-step-indicator="2"><span class="n">02</span> Tu camino</li>
-    </ol>
-
-    <div class="explorer-stage">
-      <div class="explorer-q" data-step="1">
-        <h3>¿A qué se dedica tu negocio?</h3>
-        <div class="explorer-chips" role="group" aria-label="Tipo de negocio" data-industry-group></div>
-      </div>
-
-      <div class="explorer-result" data-step="2" hidden aria-live="polite">
-        <div class="explorer-result-grid" data-result-grid></div>
-        <div class="explorer-result-foot">
-          <button type="button" class="explorer-reset" data-reset>‹ Empezar de nuevo</button>
-          <a href="#contacto" class="btn-pill btn-pill--solid on-dark">Hablemos de esto →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="process section-pad on-dark" id="proceso" aria-labelledby="proc-h">
-  <div class="eyebrow rv">Cómo trabajamos</div>
-  <h2 class="sec-h2 rv" id="proc-h">Del problema<br>al sistema.</h2>
-  <ul class="steps-list rv" role="list">
-    <li class="step-li"><span class="step-num">01</span><div><h4>Diagnóstico</h4><p>Escuchamos, preguntamos y mapeamos tu operación antes de escribir una sola línea de código.</p></div></li>
-    <li class="step-li"><span class="step-num">02</span><div><h4>Diseño</h4><p>Arquitectura, flujos y prototipos — contigo, no para ti.</p></div></li>
-    <li class="step-li"><span class="step-num">03</span><div><h4>Desarrollo</h4><p>Iteraciones cortas, demos frecuentes y código que puedes mantener.</p></div></li>
-    <li class="step-li"><span class="step-num">04</span><div><h4>Despliegue &amp; Soporte</h4><p>Lanzamos, monitoreamos y permanecemos.</p></div></li>
-  </ul>
-</section>
-
-<section class="about section-pad" id="nosotros" aria-labelledby="about-h">
-  <div class="about-head">
-    <div class="eyebrow rv">Quiénes somos</div>
-    <h2 class="sec-h2 rv" id="about-h">Por qué <span class="accent">construimos</span><br>lo que construimos.</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-card rv">
-      <h5>Misión</h5>
-      <p>Darle a cada empresa el software, la inteligencia artificial y el hardware que necesita para operar mejor — diseñado para su realidad, no adaptado desde una caja.</p>
-    </div>
-    <div class="about-card rv d1">
-      <h5>Visión</h5>
-      <p>Ser el equipo de tecnología de cabecera para negocios en Ecuador y la región — el primero al que llaman cuando algo se puede resolver con software, IA o hardware.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="contacto" aria-labelledby="cta-h">
-  <div><h2 class="rv" id="cta-h">¿Listo para<br>desarrollar <span class="accent" style="color:var(--ink)">algo real?</span></h2></div>
-  <div class="cta-right rv">
-    <a href="mailto:hola@helion.ec" class="btn-pill btn-pill--outline" style="border-color:var(--paper);color:var(--paper)">Escribir ahora →</a>
-    <a href="#campos" class="btn-pill btn-pill--outline" style="border-color:var(--paper);color:var(--paper)">Ver campos de trabajo</a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="ft-row">
-    <div class="ft-brand">
-      <a href="/" class="ft-logo" aria-label="Helion">
-        <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="43" y="6" width="14" height="18" fill="currentColor"/>
-          <rect x="43" y="76" width="14" height="18" fill="currentColor"/>
-          <rect x="6" y="43" width="18" height="14" fill="currentColor"/>
-          <rect x="76" y="43" width="18" height="14" fill="currentColor"/>
-          <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,24) rotate(45)" fill="currentColor"/>
-          <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,24) rotate(-45)" fill="currentColor"/>
-          <rect x="-4.5" y="-12" width="9" height="24" transform="translate(76,76) rotate(-45)" fill="currentColor"/>
-          <rect x="-4.5" y="-12" width="9" height="24" transform="translate(24,76) rotate(45)" fill="currentColor"/>
-          <circle cx="50" cy="50" r="21" fill="#FF7A40"/>
-        </svg>
-        <span class="logo-word">HELION</span>
-      </a>
-      <p>Software a medida, IA aplicada y tecnología de hardware para empresas en Ecuador y el mundo.</p>
-    </div>
-    <div class="ft-col">
-      <h5>Campos</h5>
-      <ul>
-        <li><a href="web-plataformas">Web &amp; Plataformas</a></li>
-        <li><a href="inteligencia-artificial">Inteligencia Artificial</a></li>
-        <li><a href="sensorica-iot">Sensórica &amp; IoT</a></li>
-      </ul>
-    </div>
-    <div class="ft-col">
-      <h5>Empresa</h5>
-      <ul>
-        <li><a href="#explora">Encuentra tu camino</a></li>
-        <li><a href="#proceso">Cómo trabajamos</a></li>
-        <li><a href="#nosotros">Quiénes somos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <span>© 2026 Helion Technology. Ecuador.</span>
-    <span>DESARROLLADO CON PRECISIÓN.</span>
-  </div>
-</footer>
-
-<script type="module">
-  import { bootstrapCommon } from './assets/js/main.js';
-  import { mountNetwork } from './assets/js/illustrations/network.js';
-  import { mountOrbit } from './assets/js/illustrations/orbit.js';
-  import { mountDevice } from './assets/js/illustrations/device.js';
-  import { initUseCases } from './assets/js/use-cases.js';
-
-  bootstrapCommon();
-  mountNetwork(document.getElementById('ill-network'), { onDark: true });
-  mountOrbit(document.getElementById('ill-orbit'), { onDark: true });
-  mountDevice(document.getElementById('ill-device'), { onDark: true });
-  initUseCases();
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Ingeniería para lo que viene — Helion</title>
+<meta name="description" content="Software a medida, inteligencia artificial e IoT. Conectamos tecnología y negocio para construir lo que viene.">
+<meta name="theme-color" content="#f4f4f4">
+<link rel="canonical" href="https://helion.ec/">
+<meta property="og:title" content="Ingeniería para lo que viene — Helion">
+<meta property="og:description" content="Software a medida, inteligencia artificial e IoT. Conectamos tecnología y negocio para construir lo que viene.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/helion-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/design-system/variables.css">
+<link rel="stylesheet" href="assets/css/studio.css">
+<script src="assets/js/studio.js" defer>
 </script>
+</head>
+<body><a class="skip" href="#main">Saltar al contenido</a>
+<header class="header"><a class="brand" href="index.html" aria-label="Helion, inicio"><span class="brand-mark" aria-hidden="true">✳</span>helion<span class="brand-dot">®</span></a>
+<nav id="navigation" aria-label="Principal"><a href="index.html#servicios">Qué hacemos</a><a href="index.html#posibilidades">Qué creamos</a><a href="index.html#metodo">Cómo trabajamos</a>
+</nav><a class="button small primary nav-cta" href="#contacto">Hablemos <span>↗</span></a><button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navigation">☰</button>
+</header>
+<main id="main">
+<section class="hero">
+<div class="hero-kicker"><span><i></i> ESTUDIO DE TECNOLOGÍA & IA</span><span>ECUADOR → DONDE ESTÉS</span>
+</div>
+<h1>El futuro no se espera.<br>Se <span class="hero-build">construye<svg viewBox="0 0 550 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 Q270 -5 545 10"/></svg></span><span class="hero-star" aria-hidden="true">✳</span>
+</h1>
+<div class="hero-bottom">
+<p>Convertimos desafíos de negocio en software,<br>inteligencia artificial y sistemas conectados.
+</p><a class="button ink" href="#servicios">Explora lo que hacemos <span>↓</span></a>
+</div>
+<div class="showcase" aria-label="Ejemplos ilustrativos de soluciones Helion"><span class="annotation">Menos fricción. Más posibilidades. ↙</span>
+<article class="artifact web-art">
+<div class="artifact-top"><span>H / WORKSPACE</span><span>↗</span>
+</div>
+<div class="mini-app"><aside>h.<br><i>◈</i><i>▦</i><i>↗</i></aside>
+<div><small>WORKSPACE / OVERVIEW</small>
+<h3>Todo, conectado.
+</h3>
+<div class="mini-stats"><span>Proyectos<b>12</b></span><span>En progreso<b>08</b></span><span>Equipo<b>24</b></span>
+</div>
+<div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+<div class="mini-line">Operaciones <span>En sincronía ↗</span>
+</div>
+</div>
+</div>
+<div class="artifact-label"><span>Software que se adapta a ti.</span><span>01</span>
+</div>
+</article>
+<article class="artifact ai-art">
+<div class="artifact-top"><span>H / INTELLIGENCE</span><span class="status"><i></i> AGENTE ACTIVO</span>
+</div>
+<div class="ai-orbit" aria-hidden="true">
+<div>
+</div>
+<div>
+</div>
+<div>
+</div><span>✳</span>
+</div>
+<div class="prompt"><span>✳</span> Convierte información en acción <span>↗</span>
+</div>
+<div class="artifact-label"><span>Tu siguiente ventaja, con IA.</span><span>02</span>
+</div>
+</article>
+<article class="artifact iot-art">
+<div class="artifact-top"><span>H / CONNECTED SYSTEMS</span><span>↗</span>
+</div>
+<div class="sensor-grid">
+<div class="sensor-ring"><span>24.8<small>°C / TEMPERATURA</small></span>
+</div>
+<div class="sensor-data"><span><i></i> SISTEMA EN LÍNEA</span><b>98<span>%</span></b><small>SEÑAL DEL SENSOR</small><svg viewBox="0 0 130 40" aria-hidden="true"><path d="M0 30 L10 30 15 20 23 29 35 28 40 8 46 30 55 24 67 26 73 15 80 22 90 20 95 3 102 22 115 15 130 18"/></svg>
+</div>
+</div>
+<div class="artifact-label"><span>El mundo físico, en tiempo real.</span><span>03</span>
+</div>
+</article>
+</div>
+<div class="showcase-caption"><span>IDEAS QUE SE CONVIERTEN EN SISTEMAS</span><span>INTERFACES ILUSTRATIVAS / HELION STUDIO</span>
+</div>
+</section>
+<div class="discipline-strip"><span>INGENIERÍA CON INTENCIÓN</span><b>Software</b><i>✳</i><b>Inteligencia artificial</b><i>✳</i><b>Internet de las cosas</b><i>✳</i>
+</div>
+<section class="section services" id="servicios">
+<div class="section-heading">
+<div><span class="eyebrow">01 / QUÉ HACEMOS</span>
+<h2>Tres disciplinas.<br>Infinitas conexiones.
+</h2>
+</div>
+<p>Un solo equipo para conectar software,<br>inteligencia y el mundo real.
+</p>
+</div>
+<div class="service-grid"><a class="service-card" href="web-plataformas.html">
+<div class="service-top"><span class="eyebrow">/ 01</span><span class="service-icon">▦</span>
+</div>
+<h3>Software &<br>plataformas
+</h3>
+<p>Herramientas que encajan en tu operación. No al revés.
+</p>
+<ul>
+<li>Aplicaciones web
+</li>
+<li>Sistemas a medida
+</li>
+<li>Integraciones
+</li>
+</ul><span class="service-link">Explorar servicio <span>↗</span></span></a><a class="service-card" href="inteligencia-artificial.html">
+<div class="service-top"><span class="eyebrow">/ 02</span><span class="service-icon">✳</span>
+</div>
+<h3>Inteligencia<br>artificial
+</h3>
+<p>Del potencial de la IA a una ventaja en tu día a día.
+</p>
+<ul>
+<li>Agentes inteligentes
+</li>
+<li>Automatización
+</li>
+<li>IA documental
+</li>
+</ul><span class="service-link">Explorar servicio <span>↗</span></span></a><a class="service-card" href="sensorica-iot.html">
+<div class="service-top"><span class="eyebrow">/ 03</span><span class="service-icon">⌁</span>
+</div>
+<h3>Sensórica<br>& IoT
+</h3>
+<p>Conecta lo que pasa en el mundo físico con mejores decisiones.
+</p>
+<ul>
+<li>Monitoreo remoto
+</li>
+<li>Hardware conectado
+</li>
+<li>Datos en tiempo real
+</li>
+</ul><span class="service-link">Explorar servicio <span>↗</span></span></a>
+</div>
+</section>
+<section class="section possibilities" id="posibilidades">
+<div class="section-heading">
+<div><span class="eyebrow">02 / LO QUE PODEMOS CREAR</span>
+<h2>La tecnología es el medio.<br>El cambio es el objetivo.
+</h2>
+</div><span class="annotation">Así se ve en la práctica ↓</span>
+</div>
+<div class="case-layout">
+<div class="case-menu" role="tablist" aria-label="Ejemplos de soluciones"><button role="tab" id="tab-0" aria-selected="true" aria-controls="case-panel" data-case="0"><span>01</span> Operaciones sin fricción <b>↗</b></button><button role="tab" id="tab-1" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="1"><span>02</span> Conocimiento que responde <b>↗</b></button><button role="tab" id="tab-2" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="2"><span>03</span> Visibilidad en tiempo real <b>↗</b></button>
+<p>Escenarios de aplicación. Diseñamos cada solución alrededor de tu contexto.
+</p>
+</div>
+<div class="case-panel" id="case-panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><span class="eyebrow" id="case-tag">SOFTWARE + AUTOMATIZACIÓN</span>
+<div class="workflow" aria-hidden="true"><span id="flow-start">Solicitud</span><i>→</i><b>✳</b><i>→</i><span id="flow-end">Resuelto</span>
+</div>
+<h3 id="case-title">Menos tareas repetitivas.<br>Más espacio para crecer.
+</h3>
+<p id="case-description">Conecta ventas, inventario y administración en una plataforma. La información fluye; tu equipo se enfoca en lo que importa.
+</p><a id="case-link" href="web-plataformas.html">Exploremos esta solución ↗</a>
+</div>
+</div>
+</section>
+<section class="section method" id="metodo">
+<div class="section-heading">
+<div><span class="eyebrow">03 / CÓMO TRABAJAMOS</span>
+<h2>De “¿y si…?”<br>a “ya funciona”.
+</h2>
+</div>
+<p>Claridad desde el primer día.<br>Colaboración en cada paso.
+</p>
+</div>
+<div class="steps">
+<article><span>01 — DESCUBRIR</span>
+<h3>Primero, escuchar.
+</h3>
+<p>Entendemos tu negocio, el problema y lo que realmente necesita cambiar.
+</p>
+</article>
+<article><span>02 — DISEÑAR</span>
+<h3>Hacerlo tangible.
+</h3>
+<p>Definimos el alcance y validamos una solución contigo antes de construir.
+</p>
+</article>
+<article><span>03 — CONSTRUIR</span>
+<h3>Avanzar contigo.
+</h3>
+<p>Desarrollamos en ciclos cortos, con entregas visibles y espacio para mejorar.
+</p>
+</article>
+<article><span>04 — EVOLUCIONAR</span>
+<h3>Seguir mejorando.
+</h3>
+<p>Acompañamos el lanzamiento y la evolución del sistema con tu operación.
+</p>
+</article>
+</div>
+</section>
+<section class="manifesto section"><span class="eyebrow">LA FORMA HELION</span>
+<p>No se trata de tener<br>más tecnología.<br>Se trata de <span>hacer más</span><br>con ella<span class="lime">.</span>
+</p>
+<div><span class="giant-star" aria-hidden="true">✳</span>
+<p>Somos tu equipo de tecnología.<br>Pensamos contigo, construimos contigo<br>y nos involucramos en lo que sigue.
+</p>
+</div>
+</section>
+<section class="section faq">
+<div><span class="eyebrow">ANTES DE EMPEZAR</span>
+<h2>Buenas preguntas.
+</h2>
+</div>
+<div>
+<details><summary>¿Necesito tener una idea completamente definida?</summary>
+<p>No. Podemos empezar por un problema de tu operación y trabajar contigo para definir el alcance y la solución adecuada.
+</p>
+</details>
+<details><summary>¿Pueden trabajar con nuestros sistemas actuales?</summary>
+<p>Sí. Primero revisamos sus APIs, datos y restricciones. Con esa información proponemos una integración o una evolución gradual.
+</p>
+</details>
+<details><summary>¿Cuánto cuesta y cuánto tarda un proyecto?</summary>
+<p>Depende del alcance, las integraciones y la complejidad. Después de una conversación inicial, preparamos una propuesta con entregables, tiempos y presupuesto.
+</p>
+</details>
+<details><summary>¿Qué ocurre después del lanzamiento?</summary>
+<p>Definimos contigo el soporte, mantenimiento y siguientes mejoras que necesita el proyecto. Ese acompañamiento queda establecido en la propuesta.
+</p>
+</details>
+</div>
+</section>
+<section class="contact section" id="contacto">
+<div><span class="eyebrow">EL SIGUIENTE PASO</span>
+<h2>Las buenas ideas<br>empiezan con<br>una conversación<span class="lime">.</span>
+</h2><a class="email" href="mailto:hola@helion.ec">hola@helion.ec ↗</a>
+<p>Cuéntanos qué quieres resolver.<br>Juntos encontramos por dónde empezar.
+</p>
+</div>
+<form id="contact-form">
+<h3>¿Qué tienes en mente?
+</h3><label for="name">Tu nombre</label><input id="name" name="name" autocomplete="name" placeholder="Cómo te llamas" required maxlength="100"><label for="email">Correo de trabajo</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@empresa.com" required maxlength="200"><label for="service">Me interesa</label><select id="service" name="service"><option>Inteligencia artificial</option><option>Software y plataformas</option><option>Sensórica e IoT</option><option>Necesito orientación</option></select><label for="message">Sobre tu proyecto</label><textarea id="message" name="message" placeholder="El problema, la idea o ese proceso que podría funcionar mejor…" required maxlength="3000" rows="3"></textarea><button class="button primary" type="submit">Preparar mi correo <span>↗</span></button>
+<p class="form-note">Se abrirá tu aplicación de correo con el mensaje listo para enviar.
+</p>
+<p id="form-status" role="status">
+</p>
+</form>
+</section>
+</main>
+<footer>
+<div class="footer-top"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✳</span>helion</a>
+<p>Ingeniería con intención.
+</p><a href="#main">Volver arriba ↑</a>
+</div>
+<div class="footer-bottom"><span>© 2026 Helion Technology</span><span>Desde Ecuador. Sin fronteras.</span><a href="mailto:hola@helion.ec">Conectemos ↗</a>
+</div>
+</footer>
 </body>
 </html>
