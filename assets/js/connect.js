@@ -32,6 +32,7 @@
     const tags = document.getElementById('solution-tags');
     tags.replaceChildren(...solution.tags.map(text => { const span = document.createElement('span'); span.textContent = text; return span; }));
     document.getElementById('solution-panel').setAttribute('aria-labelledby', `problem-${index}`);
+    document.dispatchEvent(new CustomEvent('helion:solution-change'));
   }
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => selectSolution(index));

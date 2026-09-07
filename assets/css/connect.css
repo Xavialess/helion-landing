@@ -1173,3 +1173,19 @@ h1 {
   transition:none!important}
 }
 
+
+/* The diagram's continuous motion always has a visible pause control. */
+.motion-toggle {
+  display: block;
+  margin: 16px auto 0;
+  padding: 8px 15px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: transparent;
+  font-size: 11px;
+}
+.motion-toggle:hover { background: var(--paper); }
+@media (prefers-reduced-motion: reduce) {
+  .motion-toggle { display: none; }
+}

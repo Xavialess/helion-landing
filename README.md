@@ -28,3 +28,7 @@ The form validates inputs and prepares an email to `hola@helion.ec`. The visitor
 ## Verification
 
 The four pages were browser-tested at 1440, 1024, 768, 390, and 320 pixels with no horizontal overflow. Checks cover internal links and anchors, mobile menu and Escape, tab selection and arrow-key navigation, challenge transfer into contact, native form validation, FAQ disclosures, reduced motion, and JavaScript errors.
+
+## Motion
+
+`assets/js/connect-motion.js` uses the bundled GSAP 3.12.5 core without external requests or extra plugins. It adds staggered hero entrances, one-time section reveals, solution-switch transitions, and animated signals through the SVG diagram. The diagram has a pause/resume control and stops when offscreen or when the browser tab is hidden. `gsap.matchMedia()` removes motion and restores static content when reduced motion is requested, including changes made while the page is open. All content and interactions remain available if GSAP fails to load.
