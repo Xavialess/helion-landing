@@ -34,13 +34,15 @@
 
 <section class="detail-lab" data-lab="iot" aria-label="Ejemplo interactivo de solución">
 <div class="lab-top"><span class="lab-micro">ASÍ PODRÍA FUNCIONAR</span>
+
 <div role="tablist" aria-label="Escenarios de aplicación" class="lab-tabs"><button type="button" role="tab" id="lab-tab-0" aria-selected="true" tabindex="0" aria-controls="lab-panel" data-lab-tab="0">Ambiente</button><button type="button" role="tab" id="lab-tab-1" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="1">Equipos</button><button type="button" role="tab" id="lab-tab-2" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="2">Alertas</button>
 </div>
 </div>
-<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0">
+<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0"><div data-detail-scene="0">
 <div class="lab-canvas iot-canvas">
 <div class="sensor-map">
 <div class="map-caption"><span class="lab-micro">H / OPERACIÓN EN CAMPO</span><span>Plano ilustrativo</span>
+
 </div><svg viewBox="0 0 560 310" role="img" aria-label="Plano ilustrativo con sensores conectados a un punto central"><g class="floor-lines"><path d="M40 45H220V120H340V45H515V265H40ZM40 150H145V265M220 45V95M340 120V265M430 45V175H515M145 150H260V265"/></g><g class="sensor-wires"><path d="M90 90H280V155"/><path d="M470 105H280V155"/><path d="M210 220H280V155"/></g><g class="sensor-points"><circle cx="90" cy="90" r="7"/><circle cx="470" cy="105" r="7"/><circle cx="210" cy="220" r="7"/></g><circle class="map-center" cx="280" cy="155" r="28"/><path class="map-mark" d="M270 142v26M290 142v26M270 155h20"/><g class="map-text"><text x="69" y="115">SENSOR 01</text><text x="448" y="132">SENSOR 02</text><text x="186" y="247">SENSOR 03</text></g></svg>
 <div class="map-key"><i></i> Sensores <span>—</span> Conectividad <span>◎</span> Plataforma
 </div>
@@ -57,6 +59,64 @@
 </h4>
 <p data-lab-output>Tu operación, visible
 </p>
+</div>
+</div>
+</div>
+
+</div>
+<div data-detail-scene="1" hidden>
+<div class="unique-canvas equipment-canvas">
+<div class="machine-view"><span class="lab-micro">H / ESTADO DE TUS ACTIVOS</span>
+<h3>Escucha lo que dice<br>tu equipo.
+</h3><svg viewBox="0 0 480 260" role="img" aria-label="Motor ilustrativo con un sensor de vibración"><g class="machine-outline"><rect x="115" y="65" width="200" height="140" rx="15"/><path d="M150 65v140M180 65v140M210 65v140M240 65v140M270 65v140M115 105H75V170H115M315 105H380V170H315M135 205v20h170v-20"/></g><g class="machine-rotor"><circle cx="348" cy="138" r="22"/><path d="M330 138h36M348 120v36"/></g><rect class="machine-sensor" x="210" y="38" width="33" height="32" rx="7"/><path class="machine-link" d="M227 38V15H380"/><text x="282" y="34">SENSOR DE VIBRACIÓN</text></svg><span class="machine-caption">MEDIR → OBSERVAR → PLANIFICAR</span>
+</div>
+<div class="equipment-insights"><span class="lab-micro">EQUIPO 01 / EJEMPLO ILUSTRATIVO</span>
+<h3>El estado, a la vista.
+</h3>
+<div class="equipment-reading"><span>Vibración</span><b>2.4 <small>mm/s</small></b>
+</div><svg class="vibration-wave" viewBox="0 0 320 65" aria-hidden="true"><path d="M0 33H20L28 18 38 49 48 9 58 55 68 25 78 36H100L110 14 120 50 130 5 140 59 150 22 160 33H185L195 16 205 46 215 10 225 52 235 26 245 33H275L285 20 295 43 305 29 320 33"/></svg>
+<div class="equipment-fact"><span>Señal recibida</span><b>Lectura registrada</b>
+</div>
+<div class="equipment-fact"><span>Historial disponible</span><b>Tendencia observable</b>
+</div>
+<div class="maintenance-note"><b>Mantenimiento con contexto.</b>
+<p>Tu equipo interpreta la evolución y planifica la revisión del activo.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div data-detail-scene="2" hidden>
+<div class="unique-canvas alerts-canvas">
+<div class="alert-trigger"><span class="lab-micro">01 / DETECTAR</span>
+<h3>Algo cambió.<br>El equipo se entera.
+</h3>
+<div class="threshold-chart"><span>Umbral de ejemplo</span><svg viewBox="0 0 350 150" role="img" aria-label="Una lectura cruza un umbral ilustrativo"><path class="threshold-line" d="M0 55H350"/><path class="threshold-signal" d="M0 120L40 110 80 115 120 95 160 100 200 80 235 55 270 38 310 25 350 20"/><circle class="threshold-point" cx="235" cy="55" r="6"/></svg>
+<div><span>Lectura anterior</span><span>Cambio detectado</span>
+</div>
+</div>
+<p>Una regla transforma la señal en un aviso. Los umbrales se definen para tu contexto.
+</p>
+</div>
+<div class="alert-actions">
+<div class="notification-card"><span class="lab-micro">02 / NOTIFICAR</span>
+<div><i>!</i>
+<h4>Revisar temperatura
+</h4>
+</div>
+<p>Sensor 01 · lectura fuera del rango configurado.
+</p><span class="notification-label">Aviso enviado al responsable · ejemplo</span>
+</div>
+<div class="response-card"><span class="lab-micro">03 / DAR SEGUIMIENTO</span>
+<h4>De la alerta a la acción.
+</h4>
+<div class="response-step"><i>✓</i><span>Responsable identificado</span>
+</div>
+<div class="response-step"><i>✓</i><span>Incidencia registrada</span>
+</div>
+<div class="response-step"><i>◎</i><span>Revisión del equipo pendiente</span>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -179,6 +239,7 @@
 </div>
 <div><label for="email">Tu correo</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@empresa.com">
 </div>
+
 
 </div><label for="challenge">¿Qué quieres mejorar?</label><select id="challenge" name="challenge"><option>Quiero ordenar mi operación</option><option>Quiero conectar con mis clientes</option><option>Quiero liberar tiempo de mi equipo</option><option selected>Quiero conectar dispositivos y datos</option><option>Tengo otro reto / necesito orientación</option></select><label for="message">Cuéntanos un poco</label><textarea id="message" name="message" required maxlength="2500" rows="4" placeholder="¿Qué pasa hoy y cómo te gustaría que funcionara?"></textarea><button class="arrow-button" type="submit"><span aria-hidden="true">↗</span>Preparar mi mensaje</button>
 <p class="form-note">Abriremos tu aplicación de correo con el mensaje listo para enviar.

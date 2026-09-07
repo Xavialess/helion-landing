@@ -42,3 +42,5 @@ The capability pages include interactive, animated scenarios: an AI processing f
 Vercel rewrites expose `/inteligencia`, `/sistemas`, and `/conectados`; the original HTML URLs remain available. Canonical links use the clean routes. A plain Python static server supports the original HTML pages; use `vercel dev` for rewrite-aware local navigation.
 
 AI and digital-system scenario tabs render distinct compositions rather than reusing a single diagram: Documents / Attention / Operations use a processing core, chat with human handoff, and automation queue; Operation / Clients / Integrations use a business board, customer timeline, and integration map. Each scene has its own finite animation and is hidden from assistive technology when inactive.
+
+Digital systems distinguish internal ERP/work management, customer loyalty, online sales/self-service, and integrations between existing platforms. The loyalty scenario illustrates a member app with visits and rewards. Connected-system tabs now have distinct sensor-map, equipment-health, and alert-response compositions, each with its own replayable animation. Readings, rewards, and statuses are illustrative examples.

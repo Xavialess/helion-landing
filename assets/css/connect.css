@@ -2165,3 +2165,316 @@ h1 {
 .integration-map>span{
   font-size:7px}
 }
+
+.loyalty-canvas{
+  background:var(--ember-wash);
+  grid-template-columns:1fr 1.15fr;
+  align-items:center;
+  gap:55px}
+.loyalty-phone{
+  max-width:300px;
+  width:100%;
+  margin:auto;
+  border:1px solid var(--ink);
+  border-radius:28px;
+  background:var(--paper);
+  padding:23px}
+.phone-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:16px;
+  margin-bottom:30px}
+.phone-top i{
+  width:24px;
+  height:5px;
+  border-radius:8px;
+  background:var(--ink)}
+.loyalty-phone h3{
+  font-size:27px;
+  margin:10px 0}
+.loyalty-phone>p{
+  font-size:11px}
+.member-pass{
+  background:var(--ink);
+  color:var(--paper);
+  border-radius:16px;
+  padding:19px;
+  margin-top:23px}
+.member-pass>span,.reward-coupon>span{
+  font-size:8px;
+  letter-spacing:.04em}
+.member-pass>b{
+  display:block;
+  font-size:19px;
+  font-weight:400;
+  margin:10px 0 17px}
+.visit-stamps{
+  display:flex;
+  gap:7px}
+.visit-stamps i{
+  width:30px;
+  height:30px;
+  border:1px solid #75817a;
+  border-radius:50%;
+  font-style:normal;
+  font-size:22px;
+  display:grid;
+  place-items:center;
+  color:var(--orange)}
+.visit-stamps i:last-child{
+  color:var(--paper);
+  font-size:15px}
+.member-pass small{
+  display:block;
+  font-size:8px;
+  margin-top:16px;
+  color:#cbd4cf}
+.reward-coupon{
+  border:1px solid var(--line);
+  padding:17px;
+  border-radius:14px;
+  margin-top:17px}
+.reward-coupon>b{
+  display:block;
+  font-size:17px;
+  font-weight:400;
+  margin:9px 0}
+.reward-coupon p{
+  font-size:10px}
+.coupon-code{
+  font-size:26px;
+  letter-spacing:3px;
+  margin-top:13px}
+.phone-nav{
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:15px;
+  margin-top:20px;
+  font-size:8px}
+.loyalty-explainer>p{
+  max-width:420px;
+  font-size:15px}
+.loyalty-event{
+  display:flex;
+  gap:17px;
+  border-top:1px solid #d7b8aa;
+  padding-top:20px;
+  margin-top:24px}
+.loyalty-event>i{
+  font-size:10px;
+  font-style:normal;
+  margin-top:3px}
+.loyalty-event b{
+  font-size:17px;
+  font-weight:400}
+.loyalty-event p{
+  margin-top:7px;
+  font-size:13px}
+.operations-summary{
+  text-align:center;
+  border-top:1px solid var(--line);
+  padding-top:18px;
+  margin-top:25px;
+  font-size:11px}
+
+.equipment-canvas{
+  background:var(--ink);
+  color:var(--paper);
+  align-items:center}
+.machine-view svg{
+  width:100%;
+  display:block;
+  margin:25px 0}
+.machine-outline{
+  fill:#102120;
+  stroke:#7b8e83;
+  stroke-width:1.5}
+.machine-rotor{
+  fill:none;
+  stroke:#cbd4cf;
+  stroke-width:2}
+.machine-sensor{
+  fill:var(--orange)}
+.machine-link{
+  fill:none;
+  stroke:var(--orange);
+  stroke-width:1.5}
+.machine-view text{
+  fill:#cbd4cf;
+  font-size:8px}
+.machine-caption{
+  font-size:9px;
+  letter-spacing:.07em}
+.equipment-insights{
+  padding:25px;
+  border:1px solid #43504c;
+  background:#102120;
+  border-radius:20px}
+.equipment-reading{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  margin-top:24px}
+.equipment-reading>b{
+  font-size:42px;
+  font-weight:400;
+  letter-spacing:-.04em}
+.equipment-reading small{
+  font-size:13px;
+  letter-spacing:0}
+.vibration-wave{
+  width:100%;
+  height:65px;
+  stroke:var(--orange);
+  stroke-width:1.8;
+  fill:none;
+  margin:18px 0}
+.equipment-fact{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:14px 0;
+  border-top:1px solid #43504c;
+  font-size:10px}
+.equipment-fact b{
+  font-weight:400;
+  color:#cbd4cf}
+.maintenance-note{
+  padding:17px;
+  background:var(--ember-wash);
+  color:var(--ink);
+  border-radius:12px;
+  margin-top:18px}
+.maintenance-note b{
+  font-size:14px;
+  font-weight:500}
+.maintenance-note p{
+  font-size:11px;
+  margin-top:6px}
+.alerts-canvas{
+  background:var(--ash);
+  align-items:center}
+.threshold-chart{
+  border:1px solid var(--line);
+  background:var(--paper);
+  padding:22px;
+  border-radius:18px;
+  margin:24px 0}
+.threshold-chart>span{
+  font-size:10px;
+  color:#9e3619}
+.threshold-chart svg{
+  display:block;
+  width:100%;
+  margin:15px 0}
+.threshold-line{
+  stroke:#9e3619;
+  stroke-width:1;
+  stroke-dasharray:5 5;
+  fill:none}
+.threshold-signal{
+  stroke:var(--ink);
+  stroke-width:2;
+  fill:none}
+.threshold-point{
+  fill:var(--orange)}
+.threshold-chart>div{
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  gap:15px}
+.alert-trigger>p{
+  font-size:13px}
+.notification-card{
+  padding:24px;
+  background:var(--ink);
+  color:var(--paper);
+  border-radius:18px}
+.notification-card>div{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:20px 0 14px}
+.notification-card i{
+  font-size:20px;
+  font-style:normal;
+  background:var(--orange);
+  color:var(--ink);
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center}
+.notification-card h4,.response-card h4{
+  font-size:23px}
+.notification-card p{
+  font-size:12px;
+  color:#cbd4cf}
+.notification-label{
+  display:block;
+  font-size:9px;
+  margin-top:20px;
+  border-top:1px solid #43504c;
+  padding-top:14px}
+.response-card{
+  padding:24px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:18px;
+  margin-top:20px}
+.response-card h4{
+  margin:17px 0}
+.response-step{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:12px;
+  margin-top:15px}
+.response-step i{
+  font-style:normal;
+  color:#9e3619;
+  font-size:16px}
+
+@media(max-width:1000px){
+  .loyalty-canvas{
+  gap:28px}
+.loyalty-phone{
+  padding:20px}
+.visit-stamps{
+  gap:5px}
+.visit-stamps i{
+  width:26px;
+  height:26px}
+.equipment-insights{
+  padding:20px}
+.equipment-fact{
+  font-size:9px}
+}
+
+@media(max-width:700px){
+  .loyalty-canvas{
+  grid-template-columns:1fr;
+  gap:35px}
+.loyalty-phone{
+  max-width:285px}
+.loyalty-explainer h3{
+  font-size:29px}
+.loyalty-event b{
+  font-size:16px}
+.operations-summary{
+  font-size:10px}
+.equipment-reading>b{
+  font-size:37px}
+.equipment-fact{
+  font-size:9px;
+  gap:9px}
+.machine-view svg{
+  margin:15px 0}
+.notification-card,.response-card{
+  padding:21px}
+.notification-card h4,.response-card h4{
+  font-size:21px}
+}

@@ -1,25 +1,11 @@
 (() => {
   const lab = document.querySelector('[data-lab]');
   if (!lab) return;
-  const scenarios = {
-    iot: [
-      ['Sensor conectado', 'Temperatura ambiente', 'Interpretar señales', 'Lectura disponible', 'Tu operación, visible', '24.8', '°C'],
-      ['Estado del equipo', 'Lectura de vibración', 'Observar tendencias', 'Equipo monitoreado', 'Información para mantenimiento', '2.4', 'mm/s'],
-      ['Umbral detectado', 'Temperatura fuera del rango de ejemplo', 'Activar el flujo', 'Aviso al equipo', 'Una señal se convierte en acción', '32.6', '°C']
-    ]
-  };
-  const fields = ['input-title', 'input', 'engine', 'output-title', 'output', 'reading', 'unit'];
   const tabs = [...lab.querySelectorAll('[data-lab-tab]')];
   function select(index) {
-    if (lab.dataset.lab === 'iot') {
-      scenarios.iot[index].forEach((text, i) => {
-        lab.querySelector(`[data-lab-${fields[i]}]`).textContent = text;
-      });
-    } else {
-      lab.querySelectorAll('[data-detail-scene]').forEach(scene => {
-        scene.hidden = Number(scene.dataset.detailScene) !== index;
-      });
-    }
+    lab.querySelectorAll('[data-detail-scene]').forEach(scene => {
+      scene.hidden = Number(scene.dataset.detailScene) !== index;
+    });
     tabs.forEach((tab, i) => {
       tab.setAttribute('aria-selected', String(i === index));
       tab.tabIndex = i === index ? 0 : -1;
@@ -62,11 +48,24 @@
           timeline.from(scene.querySelectorAll('.agent-task'), { y: 10, autoAlpha: 0, duration: 0.45, stagger: 0.3 }, 0.9);
           timeline.from(scene.querySelector('.approval-ticket'), { y: 14, autoAlpha: 0, duration: 0.5 }, 2);
           timeline.from(scene.querySelectorAll('.automation-footer i'), { scaleX: 0, duration: 0.6, stagger: 0.4 }, 0.7);
+        } else if (kind === 'iot' && variant === 1) {
+          timeline.from(scene.querySelector('.machine-outline'), { autoAlpha: 0, duration: 0.6 }, 0.2);
+          timeline.from(scene.querySelector('.machine-rotor'), { rotation: -150, svgOrigin: '348 138', duration: 1.8, ease: 'power2.out' }, 0.3);
+          const wave = scene.querySelector('.vibration-wave path');
+          timeline.fromTo(wave, { strokeDasharray: wave.getTotalLength(), strokeDashoffset: wave.getTotalLength() }, { strokeDashoffset: 0, duration: 1.5, ease: 'power1.inOut' }, 0.5);
+          timeline.from(scene.querySelectorAll('.equipment-fact'), { y: 10, autoAlpha: 0, duration: 0.4, stagger: 0.25 }, 1);
+          timeline.from(scene.querySelector('.maintenance-note'), { y: 12, autoAlpha: 0, duration: 0.5 }, 2);
+        } else if (kind === 'iot') {
+          const signal = scene.querySelector('.threshold-signal');
+          timeline.fromTo(signal, { strokeDasharray: signal.getTotalLength(), strokeDashoffset: signal.getTotalLength() }, { strokeDashoffset: 0, duration: 1.2, ease: 'none' }, 0.2);
+          timeline.from(scene.querySelector('.threshold-point'), { autoAlpha: 0, duration: 0.3 }, 0.95);
+          timeline.from(scene.querySelector('.notification-card'), { x: 15, autoAlpha: 0, duration: 0.5 }, 1.2);
+          timeline.from(scene.querySelectorAll('.response-step'), { y: 10, autoAlpha: 0, duration: 0.4, stagger: 0.3 }, 1.7);
         } else if (variant === 1) {
-          timeline.from(scene.querySelector('.crm-profile'), { y: 10, autoAlpha: 0, duration: 0.5 }, 0.2);
-          timeline.from(scene.querySelectorAll('.profile-fact'), { x: -10, autoAlpha: 0, duration: 0.4, stagger: 0.15 }, 0.5);
-          timeline.from(scene.querySelectorAll('.crm-event'), { y: 17, autoAlpha: 0, duration: 0.5, stagger: 0.45 }, 0.4);
-          timeline.from(scene.querySelector('.crm-reminder'), { y: 10, autoAlpha: 0, duration: 0.5 }, 2);
+          timeline.from(scene.querySelector('.loyalty-phone'), { y: 16, autoAlpha: 0, duration: 0.5 }, 0.15);
+          timeline.from(scene.querySelectorAll('.visit-stamps i'), { scale: 0, rotation: -30, duration: 0.4, stagger: 0.2, ease: 'back.out(1.3)' }, 0.55);
+          timeline.from(scene.querySelector('.reward-coupon'), { y: 15, autoAlpha: 0, duration: 0.5 }, 1.6);
+          timeline.from(scene.querySelectorAll('.loyalty-event'), { x: 12, autoAlpha: 0, duration: 0.4, stagger: 0.4 }, 0.6);
         } else {
           timeline.from(scene.querySelectorAll('.integration-node'), { autoAlpha: 0, duration: 0.45, stagger: 0.2 }, 0.2);
           scene.querySelectorAll('.integration-wires path').forEach((path, i) => {
@@ -89,8 +88,7 @@
         timeline.from(scene.querySelector('.output-check'), { scale: 0.5, autoAlpha: 0, duration: 0.6, ease: 'back.out(1.2)' }, 1.7);
         timeline.from(scene.querySelector('.review-line'), { autoAlpha: 0, duration: 0.5 }, 2.2);
       } else if (kind === 'systems') {
-        timeline.from(scene.querySelectorAll('.sync-line'), { scaleX: 0, duration: 0.6, stagger: 0.25, ease: 'power2.inOut' }, 0.5);
-        timeline.from(scene.querySelectorAll('.sync-node'), { y: 8, autoAlpha: 0, duration: 0.45, stagger: 0.2 }, 0.5);
+        timeline.from(scene.querySelector('.operations-summary'), { y: 8, autoAlpha: 0, duration: 0.45 }, 1.6);
         timeline.from(scene.querySelectorAll('.task-bottom'), { y: 6, autoAlpha: 0, duration: 0.5, stagger: 0.3 }, 1);
       } else {
         const wires = scene.querySelectorAll('.sensor-wires path');
