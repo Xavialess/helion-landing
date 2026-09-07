@@ -2,16 +2,6 @@
   const lab = document.querySelector('[data-lab]');
   if (!lab) return;
   const scenarios = {
-    ai: [
-      ['Documento recibido', 'Solicitud de compra', 'Leer y comprender', 'Información preparada', 'Tu equipo decide'],
-      ['Pregunta del cliente', 'Una consulta sobre su pedido', 'Consultar el contexto', 'Respuesta sugerida', 'Derivar cuando hace falta'],
-      ['Tarea recurrente', 'Clasificar solicitudes entrantes', 'Coordinar las herramientas', 'Acción preparada', 'Validar antes de ejecutar']
-    ],
-    systems: [
-      ['Nueva solicitud', 'Pedido del cliente', 'Conectar procesos', 'Equipo coordinado', 'Información en sincronía'],
-      ['Un nuevo contacto', 'Una oportunidad por acompañar', 'Dar continuidad', 'Seguimiento preparado', 'Cada conversación, con contexto'],
-      ['Dato actualizado', 'Un cambio en tu inventario', 'Sincronizar herramientas', 'Sistemas alineados', 'La información llega donde hace falta']
-    ],
     iot: [
       ['Sensor conectado', 'Temperatura ambiente', 'Interpretar señales', 'Lectura disponible', 'Tu operación, visible', '24.8', '°C'],
       ['Estado del equipo', 'Lectura de vibración', 'Observar tendencias', 'Equipo monitoreado', 'Información para mantenimiento', '2.4', 'mm/s'],
@@ -21,9 +11,15 @@
   const fields = ['input-title', 'input', 'engine', 'output-title', 'output', 'reading', 'unit'];
   const tabs = [...lab.querySelectorAll('[data-lab-tab]')];
   function select(index) {
-    scenarios[lab.dataset.lab][index].forEach((text, i) => {
-      lab.querySelector(`[data-lab-${fields[i]}]`).textContent = text;
-    });
+    if (lab.dataset.lab === 'iot') {
+      scenarios.iot[index].forEach((text, i) => {
+        lab.querySelector(`[data-lab-${fields[i]}]`).textContent = text;
+      });
+    } else {
+      lab.querySelectorAll('[data-detail-scene]').forEach(scene => {
+        scene.hidden = Number(scene.dataset.detailScene) !== index;
+      });
+    }
     tabs.forEach((tab, i) => {
       tab.setAttribute('aria-selected', String(i === index));
       tab.tabIndex = i === index ? 0 : -1;
@@ -53,31 +49,59 @@
       timeline?.revert();
       timeline = gsap.timeline({ paused: !visible || document.hidden });
       const kind = lab.dataset.lab;
-      timeline.from(lab.querySelectorAll('.lab-step'), {
+      const scene = lab.querySelector('[data-detail-scene]:not([hidden])') || lab;
+      const variant = Number(scene.dataset.detailScene || 0);
+      if (variant > 0) {
+        timeline.from(scene.querySelector('.unique-canvas'), { y: 12, autoAlpha: 0, duration: 0.4, ease: 'power2.out' });
+        if (kind === 'ai' && variant === 1) {
+          timeline.from(scene.querySelectorAll('.chat-message, .context-lookup'), { y: 12, autoAlpha: 0, duration: 0.45, stagger: 0.45 }, 0.3);
+          timeline.from(scene.querySelectorAll('.context-tile'), { x: 14, autoAlpha: 0, duration: 0.45, stagger: 0.5 }, 0.8);
+          timeline.from(scene.querySelector('.handoff-result'), { y: 10, autoAlpha: 0, duration: 0.5 }, 2.2);
+        } else if (kind === 'ai') {
+          timeline.from(scene.querySelectorAll('.inbox-item'), { x: -12, autoAlpha: 0, duration: 0.4, stagger: 0.18 }, 0.3);
+          timeline.from(scene.querySelectorAll('.agent-task'), { y: 10, autoAlpha: 0, duration: 0.45, stagger: 0.3 }, 0.9);
+          timeline.from(scene.querySelector('.approval-ticket'), { y: 14, autoAlpha: 0, duration: 0.5 }, 2);
+          timeline.from(scene.querySelectorAll('.automation-footer i'), { scaleX: 0, duration: 0.6, stagger: 0.4 }, 0.7);
+        } else if (variant === 1) {
+          timeline.from(scene.querySelector('.crm-profile'), { y: 10, autoAlpha: 0, duration: 0.5 }, 0.2);
+          timeline.from(scene.querySelectorAll('.profile-fact'), { x: -10, autoAlpha: 0, duration: 0.4, stagger: 0.15 }, 0.5);
+          timeline.from(scene.querySelectorAll('.crm-event'), { y: 17, autoAlpha: 0, duration: 0.5, stagger: 0.45 }, 0.4);
+          timeline.from(scene.querySelector('.crm-reminder'), { y: 10, autoAlpha: 0, duration: 0.5 }, 2);
+        } else {
+          timeline.from(scene.querySelectorAll('.integration-node'), { autoAlpha: 0, duration: 0.45, stagger: 0.2 }, 0.2);
+          scene.querySelectorAll('.integration-wires path').forEach((path, i) => {
+            const length = path.getTotalLength();
+            timeline.fromTo(path, { strokeDasharray: length, strokeDashoffset: length }, { strokeDashoffset: 0, duration: 0.85, ease: 'power2.inOut' }, 0.45 + i * 0.2);
+          });
+          timeline.from(scene.querySelectorAll('.integration-log > div'), { y: 10, autoAlpha: 0, duration: 0.45, stagger: 0.35 }, 1);
+        }
+        return;
+      }
+      timeline.from(scene.querySelectorAll('.lab-step'), {
         y: 18, autoAlpha: 0, duration: 0.6, stagger: 0.2, ease: 'power3.out'
       });
       if (kind === 'ai') {
-        timeline.from(lab.querySelectorAll('.lab-orbit'), { scale: 0.75, autoAlpha: 0, svgOrigin: '130 130', duration: 1, stagger: 0.15, ease: 'power2.out' }, 0.25);
-        timeline.fromTo(lab.querySelector('.lab-scan'), { y: 0, opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.45);
-        timeline.to(lab.querySelector('.lab-scan'), { y: 60, duration: 1.2, ease: 'power1.inOut' }, 0.6);
-        timeline.to(lab.querySelector('.lab-scan'), { opacity: 0, duration: 0.2 }, 1.8);
-        timeline.from(lab.querySelectorAll('.engine-steps span'), { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.25 }, 1);
-        timeline.from(lab.querySelector('.output-check'), { scale: 0.5, autoAlpha: 0, duration: 0.6, ease: 'back.out(1.2)' }, 1.7);
-        timeline.from(lab.querySelector('.review-line'), { autoAlpha: 0, duration: 0.5 }, 2.2);
+        timeline.from(scene.querySelectorAll('.lab-orbit'), { scale: 0.75, autoAlpha: 0, svgOrigin: '130 130', duration: 1, stagger: 0.15, ease: 'power2.out' }, 0.25);
+        timeline.fromTo(scene.querySelector('.lab-scan'), { y: 0, opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.45);
+        timeline.to(scene.querySelector('.lab-scan'), { y: 60, duration: 1.2, ease: 'power1.inOut' }, 0.6);
+        timeline.to(scene.querySelector('.lab-scan'), { opacity: 0, duration: 0.2 }, 1.8);
+        timeline.from(scene.querySelectorAll('.engine-steps span'), { y: 8, autoAlpha: 0, duration: 0.4, stagger: 0.25 }, 1);
+        timeline.from(scene.querySelector('.output-check'), { scale: 0.5, autoAlpha: 0, duration: 0.6, ease: 'back.out(1.2)' }, 1.7);
+        timeline.from(scene.querySelector('.review-line'), { autoAlpha: 0, duration: 0.5 }, 2.2);
       } else if (kind === 'systems') {
-        timeline.from(lab.querySelectorAll('.sync-line'), { scaleX: 0, duration: 0.6, stagger: 0.25, ease: 'power2.inOut' }, 0.5);
-        timeline.from(lab.querySelectorAll('.sync-node'), { y: 8, autoAlpha: 0, duration: 0.45, stagger: 0.2 }, 0.5);
-        timeline.from(lab.querySelectorAll('.task-bottom'), { y: 6, autoAlpha: 0, duration: 0.5, stagger: 0.3 }, 1);
+        timeline.from(scene.querySelectorAll('.sync-line'), { scaleX: 0, duration: 0.6, stagger: 0.25, ease: 'power2.inOut' }, 0.5);
+        timeline.from(scene.querySelectorAll('.sync-node'), { y: 8, autoAlpha: 0, duration: 0.45, stagger: 0.2 }, 0.5);
+        timeline.from(scene.querySelectorAll('.task-bottom'), { y: 6, autoAlpha: 0, duration: 0.5, stagger: 0.3 }, 1);
       } else {
-        const wires = lab.querySelectorAll('.sensor-wires path');
+        const wires = scene.querySelectorAll('.sensor-wires path');
         wires.forEach((path, i) => {
           const length = path.getTotalLength();
           timeline.fromTo(path, { strokeDasharray: length, strokeDashoffset: length }, { strokeDashoffset: 0, duration: 1, ease: 'power2.inOut' }, 0.3 + i * 0.2);
         });
-        timeline.from(lab.querySelectorAll('.sensor-points circle'), { scale: 0, transformOrigin: '50% 50%', duration: 0.45, stagger: 0.2 }, 0.15);
-        const chart = lab.querySelector('.signal-chart path');
+        timeline.from(scene.querySelectorAll('.sensor-points circle'), { scale: 0, transformOrigin: '50% 50%', duration: 0.45, stagger: 0.2 }, 0.15);
+        const chart = scene.querySelector('.signal-chart path');
         timeline.fromTo(chart, { strokeDasharray: chart.getTotalLength(), strokeDashoffset: chart.getTotalLength() }, { strokeDashoffset: 0, duration: 1.2, ease: 'power1.inOut' }, 1);
-        timeline.from(lab.querySelector('.telemetry-result'), { y: 8, autoAlpha: 0, duration: 0.5 }, 1.9);
+        timeline.from(scene.querySelector('.telemetry-result'), { y: 8, autoAlpha: 0, duration: 0.5 }, 1.9);
       }
     });
     const sync = () => {

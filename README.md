@@ -40,3 +40,5 @@ The “Qué resolvemos” explorer includes three distinct HTML/SVG scenes: an o
 The capability pages include interactive, animated scenarios: an AI processing flow, an integrated business workspace, and a sensor map with illustrative telemetry. Each supports keyboard-operated scenario tabs, finite replayable GSAP timelines, offscreen pausing, and reduced-motion cleanup. Warm Ember surfaces add restrained color across the site.
 
 Vercel rewrites expose `/inteligencia`, `/sistemas`, and `/conectados`; the original HTML URLs remain available. Canonical links use the clean routes. A plain Python static server supports the original HTML pages; use `vercel dev` for rewrite-aware local navigation.
+
+AI and digital-system scenario tabs render distinct compositions rather than reusing a single diagram: Documents / Attention / Operations use a processing core, chat with human handoff, and automation queue; Operation / Clients / Integrations use a business board, customer timeline, and integration map. Each scene has its own finite animation and is hidden from assistive technology when inactive.

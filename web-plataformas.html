@@ -34,10 +34,11 @@
 
 <section class="detail-lab" data-lab="systems" aria-label="Ejemplo interactivo de solución">
 <div class="lab-top"><span class="lab-micro">ASÍ PODRÍA FUNCIONAR</span>
+
 <div role="tablist" aria-label="Escenarios de aplicación" class="lab-tabs"><button type="button" role="tab" id="lab-tab-0" aria-selected="true" tabindex="0" aria-controls="lab-panel" data-lab-tab="0">Operación</button><button type="button" role="tab" id="lab-tab-1" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="1">Clientes</button><button type="button" role="tab" id="lab-tab-2" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="2">Integraciones</button>
 </div>
 </div>
-<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0">
+<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0"><div data-detail-scene="0">
 <div class="lab-canvas systems-canvas">
 <aside class="workspace-rail" aria-hidden="true"><b>h.</b><span>▦</span><span>↗</span><span>☷</span><span>⌘</span>
 </aside>
@@ -81,6 +82,76 @@
 </div>
 </div>
 <div class="workspace-sync"><span class="sync-node">CRM</span><i class="sync-line"></i><span class="sync-node">ERP</span><i class="sync-line"></i><span class="sync-node">Web</span><i class="sync-line"></i><span class="sync-node">Tus herramientas</span>
+</div>
+</div>
+</div>
+
+</div>
+<div data-detail-scene="1" hidden>
+<div class="unique-canvas crm-canvas">
+<div class="crm-summary"><span class="lab-micro">H / RELACIONES CON CONTINUIDAD</span>
+<h3>Conoce a tu cliente.<br>Acompaña su siguiente paso.
+</h3>
+<div class="crm-profile"><span class="profile-avatar">ML</span>
+<div><b>María López</b><small>Contacto ilustrativo</small>
+</div>
+</div>
+<div class="profile-fact"><span>Interés</span><b>Una nueva propuesta</b>
+</div>
+<div class="profile-fact"><span>Canal</span><b>Formulario web</b>
+</div>
+<div class="profile-fact"><span>Responsable</span><b>Equipo comercial</b>
+</div>
+<div class="customer-tags"><span>Historial</span><span>Preferencias</span><span>Seguimiento</span>
+</div>
+</div>
+<div class="crm-journey"><span class="lab-micro">CADA INTERACCIÓN TIENE UN SIGUIENTE PASO</span>
+<div class="crm-event"><i>01</i>
+<div><small>PRIMER CONTACTO</small>
+<h4>Una oportunidad comienza.
+</h4>
+<p>El interés llega desde tu sitio web.
+</p>
+</div>
+</div>
+<div class="crm-event"><i>02</i>
+<div><small>CONVERSACIÓN</small>
+<h4>El contexto viaja con el cliente.
+</h4>
+<p>Tu equipo conoce lo que necesita.
+</p>
+</div>
+</div>
+<div class="crm-event"><i>03</i>
+<div><small>CONTINUIDAD</small>
+<h4>El seguimiento queda preparado.
+</h4>
+<p>La relación sigue después de la primera venta.
+</p>
+</div>
+</div>
+<div class="crm-reminder">↗ Próximo paso: dar seguimiento a la propuesta.
+</div>
+</div>
+</div>
+</div>
+<div data-detail-scene="2" hidden>
+<div class="unique-canvas integration-canvas">
+<div class="integration-copy"><span class="lab-micro">TUS HERRAMIENTAS, UN MISMO IDIOMA</span>
+<h3>La información se mueve.<br>Tu equipo avanza.
+</h3>
+<p>Conectamos lo que ya usas para que un cambio llegue a los sistemas que lo necesitan.
+</p>
+<div class="integration-log">
+<div>01 <span>Inventario actualizado</span><b>Detectado</b>
+</div>
+<div>02 <span>Datos transformados</span><b>Preparados</b>
+</div>
+<div>03 <span>Herramientas sincronizadas</span><b>Confirmado</b>
+</div>
+</div>
+</div>
+<div class="integration-map"><svg viewBox="0 0 480 330" role="img" aria-label="CRM, ERP, web y herramientas conectadas mediante una integración central"><g class="integration-wires"><path d="M100 65H240V165"/><path d="M380 65H240V165"/><path d="M100 265H240V165"/><path d="M380 265H240V165"/></g><g class="integration-hub"><circle cx="240" cy="165" r="48"/><text x="240" y="172" text-anchor="middle">helion</text></g><g class="integration-node"><rect x="35" y="35" width="130" height="60" rx="12"/><text x="100" y="72" text-anchor="middle">CRM</text></g><g class="integration-node"><rect x="315" y="35" width="130" height="60" rx="12"/><text x="380" y="72" text-anchor="middle">ERP</text></g><g class="integration-node"><rect x="35" y="235" width="130" height="60" rx="12"/><text x="100" y="272" text-anchor="middle">Web</text></g><g class="integration-node"><rect x="315" y="235" width="130" height="60" rx="12"/><text x="380" y="272" text-anchor="middle">Tus herramientas</text></g></svg><span>INTEGRACIONES ADAPTADAS A TUS SISTEMAS</span>
 </div>
 </div>
 </div>
@@ -203,6 +274,7 @@
 </div>
 <div><label for="email">Tu correo</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@empresa.com">
 </div>
+
 
 </div><label for="challenge">¿Qué quieres mejorar?</label><select id="challenge" name="challenge"><option>Quiero ordenar mi operación</option><option>Quiero conectar con mis clientes</option><option>Quiero liberar tiempo de mi equipo</option><option>Quiero conectar dispositivos y datos</option><option>Tengo otro reto / necesito orientación</option></select><label for="message">Cuéntanos un poco</label><textarea id="message" name="message" required maxlength="2500" rows="4" placeholder="¿Qué pasa hoy y cómo te gustaría que funcionara?"></textarea><button class="arrow-button" type="submit"><span aria-hidden="true">↗</span>Preparar mi mensaje</button>
 <p class="form-note">Abriremos tu aplicación de correo con el mensaje listo para enviar.

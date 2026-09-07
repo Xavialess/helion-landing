@@ -1837,3 +1837,331 @@ h1 {
 .detail-grid article{
   padding:25px}
 }
+
+.unique-canvas{
+  padding:36px;
+  background:var(--ash);
+  min-height:430px;
+  gap:32px;
+  display:grid;
+  grid-template-columns:1.1fr 1fr}
+.unique-canvas h3{
+  font-size:29px;
+  line-height:1.15;
+  margin:18px 0;
+  letter-spacing:-.035em}
+.unique-canvas p{
+  font-size:13px}
+.conversation-window{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:17px}
+.conversation-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:16px}
+.conversation-avatar,.profile-avatar{
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--ember-wash);
+  font-size:22px}
+.conversation-top b{
+  font-size:14px;
+  font-weight:500}
+.conversation-top small{
+  display:block;
+  font-size:10px;
+  margin-top:3px}
+.chat-message{
+  padding:13px 16px;
+  border-radius:14px;
+  max-width:90%}
+.chat-message small{
+  font-size:8px;
+  display:block;
+  margin-bottom:7px}
+.customer-message{
+  background:var(--ash);
+  align-self:flex-end}
+.assistant-message{
+  background:var(--ink);
+  color:var(--paper);
+  align-self:flex-start}
+.context-lookup{
+  font-size:10px;
+  display:flex;
+  gap:9px;
+  align-items:center;
+  color:#6a4032}
+.context-lookup>span{
+  font-size:22px}
+.handoff-panel{
+  align-self:center}
+.context-tile{
+  display:flex;
+  gap:15px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--line)}
+.context-tile>span{
+  font-size:11px;
+  color:#9e3619}
+.context-tile b{
+  font-size:15px;
+  font-weight:500}
+.context-tile p{
+  margin-top:6px}
+.handoff-result{
+  display:flex;
+  gap:12px;
+  background:var(--ember-wash);
+  border-radius:12px;
+  padding:16px;
+  font-size:12px;
+  margin-top:25px}
+.automation-canvas{
+  display:block;
+  background:var(--ink);
+  color:var(--paper)}
+.automation-heading h3{
+  margin-bottom:26px}
+.automation-flow{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px}
+.automation-stage{
+  background:#102120;
+  border:1px solid #43504c;
+  border-radius:18px;
+  padding:23px}
+.stage-icon{
+  display:block;
+  font-size:30px;
+  color:var(--orange);
+  margin-bottom:20px}
+.automation-stage>small{
+  font-size:9px;
+  color:#cbd4cf}
+.automation-stage h4{
+  font-size:22px;
+  line-height:1.2;
+  margin:12px 0 21px}
+.inbox-item,.agent-task{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  border-top:1px solid #43504c;
+  padding:12px 0;
+  font-size:11px}
+.agent-task i{
+  font-style:normal;
+  color:var(--orange)}
+.approval-stage p{
+  color:#cbd4cf}
+.approval-ticket{
+  background:var(--ember-wash);
+  color:var(--ink);
+  padding:15px;
+  border-radius:12px;
+  margin-top:24px;
+  font-size:12px}
+.approval-ticket span{
+  display:block;
+  font-size:9px;
+  margin-top:7px}
+.automation-footer{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  max-width:650px;
+  margin:28px auto 0;
+  font-size:10px}
+.automation-footer i{
+  flex:1;
+  height:1px;
+  background:#69766f;
+  transform-origin:left}
+.crm-canvas{
+  grid-template-columns:.95fr 1.05fr}
+.crm-summary{
+  padding:25px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:18px}
+.crm-profile{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin:27px 0}
+.profile-avatar{
+  width:52px;
+  height:52px;
+  font-size:17px}
+.crm-profile b{
+  font-size:17px;
+  font-weight:500}
+.crm-profile small{
+  display:block;
+  font-size:10px;
+  margin-top:5px}
+.profile-fact{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 0;
+  border-top:1px solid var(--line);
+  font-size:11px}
+.profile-fact b{
+  font-weight:400}
+.customer-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:22px}
+.customer-tags span{
+  font-size:9px;
+  padding:5px 9px;
+  border-radius:8px;
+  background:var(--ember-wash)}
+.crm-journey{
+  padding:15px 0}
+.crm-event{
+  display:flex;
+  gap:18px;
+  margin-top:29px}
+.crm-event>i{
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:var(--paper);
+  font-style:normal;
+  font-size:10px}
+.crm-event small{
+  font-size:9px;
+  color:#9e3619}
+.crm-event h4{
+  font-size:21px;
+  line-height:1.2;
+  margin:8px 0}
+.crm-reminder{
+  padding:17px;
+  border-radius:12px;
+  background:var(--ink);
+  color:var(--paper);
+  font-size:11px;
+  margin-top:30px}
+.integration-canvas{
+  background:var(--ember-wash);
+  grid-template-columns:1fr 1.2fr;
+  align-items:center}
+.integration-copy>p{
+  max-width:400px}
+.integration-log{
+  margin-top:30px}
+.integration-log>div{
+  display:flex;
+  gap:12px;
+  border-top:1px solid #d7b8aa;
+  padding:14px 0;
+  font-size:10px}
+.integration-log b{
+  margin-left:auto;
+  font-weight:400;
+  font-size:8px}
+.integration-map svg{
+  display:block;
+  width:100%}
+.integration-wires{
+  stroke:var(--ink);
+  stroke-width:1.5;
+  fill:none}
+.integration-hub circle{
+  fill:var(--orange)}
+.integration-hub text{
+  fill:var(--ink);
+  font-size:20px}
+.integration-node rect{
+  fill:var(--paper);
+  stroke:#c7ab9e}
+.integration-node text{
+  fill:var(--ink);
+  font-size:13px}
+.integration-map>span{
+  display:block;
+  text-align:center;
+  font-size:8px;
+  margin-top:20px;
+  letter-spacing:.06em}
+
+@media(max-width:1000px){
+  .unique-canvas{
+  padding:25px;
+  gap:22px}
+.unique-canvas h3{
+  font-size:25px}
+.automation-flow{
+  gap:12px}
+.automation-stage{
+  padding:17px}
+.automation-stage h4{
+  font-size:19px}
+.crm-summary{
+  padding:20px}
+.integration-log>div{
+  gap:7px;
+  font-size:9px}
+}
+
+@media(max-width:700px){
+  .unique-canvas{
+  padding:24px 20px;
+  grid-template-columns:1fr;
+  gap:28px}
+.conversation-window{
+  padding:17px}
+.conversation-top b{
+  font-size:12px}
+.conversation-top small{
+  font-size:8px}
+.chat-message{
+  max-width:95%;
+  padding:13px}
+.unique-canvas h3{
+  font-size:27px}
+.automation-flow{
+  grid-template-columns:1fr;
+  gap:17px}
+.automation-stage{
+  padding:22px}
+.automation-stage h4{
+  font-size:23px}
+.automation-footer{
+  gap:8px;
+  font-size:8px}
+.crm-summary{
+  padding:20px}
+.crm-event h4{
+  font-size:20px}
+.integration-log>div{
+  font-size:9px}
+.integration-log b{
+  font-size:8px}
+.integration-map{
+  min-width:0}
+.integration-map>span{
+  font-size:7px}
+}

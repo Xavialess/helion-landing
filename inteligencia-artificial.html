@@ -34,10 +34,11 @@
 
 <section class="detail-lab" data-lab="ai" aria-label="Ejemplo interactivo de solución">
 <div class="lab-top"><span class="lab-micro">ASÍ PODRÍA FUNCIONAR</span>
+
 <div role="tablist" aria-label="Escenarios de aplicación" class="lab-tabs"><button type="button" role="tab" id="lab-tab-0" aria-selected="true" tabindex="0" aria-controls="lab-panel" data-lab-tab="0">Documentos</button><button type="button" role="tab" id="lab-tab-1" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="1">Atención</button><button type="button" role="tab" id="lab-tab-2" aria-selected="false" tabindex="-1" aria-controls="lab-panel" data-lab-tab="2">Operaciones</button>
 </div>
 </div>
-<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0">
+<div id="lab-panel" role="tabpanel" aria-labelledby="lab-tab-0" tabindex="0"><div data-detail-scene="0">
 <div class="lab-canvas ai-canvas">
 <div class="lab-input lab-step"><span class="lab-micro">01 / ENTRADA</span>
 <div class="paper-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><b class="lab-scan"></b>
@@ -61,6 +62,90 @@
 <p data-lab-output>Tu equipo decide
 </p>
 <div class="review-line"><i></i> Revisión humana
+</div>
+</div>
+</div>
+
+</div>
+<div data-detail-scene="1" hidden>
+<div class="unique-canvas conversation-canvas">
+<div class="conversation-window">
+<div class="conversation-top"><span class="conversation-avatar">h</span>
+<div><b>Asistente de atención</b><small>Conectado al contexto de tu negocio</small>
+</div>
+</div>
+<div class="chat-message customer-message"><small>CLIENTE</small>
+<p>Hola, ¿en qué estado está mi pedido?
+</p>
+</div>
+<div class="context-lookup"><span>⌕</span> Consultar pedido y políticas de entrega
+</div>
+<div class="chat-message assistant-message"><small>ASISTENTE</small>
+<p>Tu pedido está preparado. Puedo ayudarte a coordinar la entrega.
+</p>
+</div>
+<div class="chat-message customer-message">
+<p>Necesito cambiar la dirección.
+</p>
+</div>
+</div>
+<aside class="handoff-panel"><span class="lab-micro">CONTINUIDAD, NO CONVERSACIONES AISLADAS</span>
+<h3>Una respuesta útil.<br>Un equipo al tanto.
+</h3>
+<div class="context-tile"><span>01</span>
+<div><b>Contexto disponible</b>
+<p>Pedido, historial y preferencias.
+</p>
+</div>
+</div>
+<div class="context-tile"><span>02</span>
+<div><b>Derivación con contexto</b>
+<p>El equipo recibe la conversación.
+</p>
+</div>
+</div>
+<div class="handoff-result">↗ <span>Una persona continúa cuando hace falta.</span>
+</div>
+</aside>
+</div>
+</div>
+<div data-detail-scene="2" hidden>
+<div class="unique-canvas automation-canvas">
+<div class="automation-heading"><span class="lab-micro">UN PROCESO QUE AVANZA CONTIGO</span>
+<h3>De tarea pendiente a acción preparada.
+</h3>
+</div>
+<div class="automation-flow">
+<div class="automation-stage"><span class="stage-icon">☷</span><small>01 / RECIBIR</small>
+<h4>Solicitudes entrantes
+</h4>
+<div class="inbox-item">Correo del cliente <span>↗</span>
+</div>
+<div class="inbox-item">Formulario web <span>↗</span>
+</div>
+<div class="inbox-item">Documento adjunto <span>↗</span>
+</div>
+</div>
+<div class="automation-stage agent-stage"><span class="stage-icon">✳</span><small>02 / COORDINAR</small>
+<h4>Agentes con una tarea clara.
+</h4>
+<div class="agent-task">Clasificar <i>✓</i>
+</div>
+<div class="agent-task">Relacionar información <i>✓</i>
+</div>
+<div class="agent-task">Preparar siguiente paso <i>✓</i>
+</div>
+</div>
+<div class="automation-stage approval-stage"><span class="stage-icon">◎</span><small>03 / VALIDAR</small>
+<h4>El criterio es de tu equipo.
+</h4>
+<p>Revisa la propuesta antes de ejecutar una acción importante.
+</p>
+<div class="approval-ticket">Propuesta preparada<span>Por revisar</span>
+</div>
+</div>
+</div>
+<div class="automation-footer"><span>Entrada</span><i></i><span>IA + herramientas</span><i></i><span>Supervisión humana</span>
 </div>
 </div>
 </div>
@@ -183,6 +268,7 @@
 </div>
 <div><label for="email">Tu correo</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@empresa.com">
 </div>
+
 
 </div><label for="challenge">¿Qué quieres mejorar?</label><select id="challenge" name="challenge"><option>Quiero ordenar mi operación</option><option>Quiero conectar con mis clientes</option><option selected>Quiero liberar tiempo de mi equipo</option><option>Quiero conectar dispositivos y datos</option><option>Tengo otro reto / necesito orientación</option></select><label for="message">Cuéntanos un poco</label><textarea id="message" name="message" required maxlength="2500" rows="4" placeholder="¿Qué pasa hoy y cómo te gustaría que funcionara?"></textarea><button class="arrow-button" type="submit"><span aria-hidden="true">↗</span>Preparar mi mensaje</button>
 <p class="form-note">Abriremos tu aplicación de correo con el mensaje listo para enviar.
