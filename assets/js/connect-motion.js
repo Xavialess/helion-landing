@@ -32,17 +32,87 @@
     document.querySelectorAll('.positioning, .section-intro, .capability, .connected-band, .process-grid article, .faq-grid, .contact, .detail-grid article, .detail-principle').forEach(element => revealObserver.observe(element));
     observers.push(revealObserver);
 
-    context.add('changeSolution', () => {
-      // Finish a previous transition before a rapid tab change to avoid stale styles.
-      const targets = document.querySelectorAll('.solution-copy h3, .solution-copy > p, .preview-content');
-      gsap.killTweensOf(targets);
-      gsap.fromTo(targets, { y: 10, autoAlpha: 0.45 }, {
-        y: 0, autoAlpha: 1, duration: 0.4, stagger: 0.035,
-        ease: 'power2.out', clearProps: 'transform,opacity,visibility'
+    const preview = document.querySelector('.product-preview');
+    if (preview) {
+      let sceneAnimation;
+      let previewInView = false;
+      const replay = preview.querySelector('.scene-replay');
+      replay.hidden = false;
+      context.add('animateScene', () => {
+        // Revert interrupted scenes before rebuilding, including rapid tab changes.
+        sceneAnimation?.revert();
+        const scene = preview.querySelector('[data-scene]:not([hidden])');
+        const index = Number(scene.dataset.scene);
+        sceneAnimation = gsap.timeline({ paused: !previewInView || document.hidden });
+        sceneAnimation.fromTo(scene, { y: 15, autoAlpha: 0 }, {
+          y: 0, autoAlpha: 1, duration: 0.45, ease: 'power3.out'
+        });
+        if (index === 0) {
+          sceneAnimation.from(scene.querySelectorAll('.preview-metrics > div'), {
+            y: 12, autoAlpha: 0, duration: 0.4, stagger: 0.12
+          }, 0.2);
+          sceneAnimation.from(scene.querySelectorAll('.preview-table > div:not(:first-child)'), {
+            x: 18, autoAlpha: 0, duration: 0.45, stagger: 0.3, ease: 'power2.out'
+          }, 0.55);
+          sceneAnimation.from(scene.querySelectorAll('.state'), {
+            scale: 0.75, autoAlpha: 0, duration: 0.3, stagger: 0.3
+          }, 0.85);
+          sceneAnimation.from(scene.querySelector('.ai-note'), { y: 8, autoAlpha: 0, duration: 0.4 }, 1.8);
+        } else if (index === 1) {
+          sceneAnimation.from(scene.querySelector('.customer-card'), { y: 15, autoAlpha: 0, duration: 0.45 }, 0.15);
+          sceneAnimation.fromTo(scene.querySelector('circle'), { strokeDasharray: 202, strokeDashoffset: 202 }, {
+            strokeDashoffset: 0, duration: 1, ease: 'power2.inOut'
+          }, 0.35);
+          sceneAnimation.from(scene.querySelectorAll('.journey-track i'), {
+            scaleX: 0, duration: 0.5, stagger: 0.3, ease: 'power2.inOut'
+          }, 0.55);
+          sceneAnimation.from(scene.querySelector('.message-card'), { x: -18, autoAlpha: 0, duration: 0.5 }, 1.15);
+          sceneAnimation.from(scene.querySelector('.loyalty-card'), { y: 18, autoAlpha: 0, duration: 0.5 }, 1.6);
+          sceneAnimation.from(scene.querySelectorAll('.loyalty-stamps span'), {
+            scale: 0, rotation: -35, duration: 0.4, stagger: 0.12, ease: 'back.out(1.5)'
+          }, 1.95);
+        } else {
+          sceneAnimation.from(scene.querySelector('.document-card'), { y: 14, autoAlpha: 0, duration: 0.45 }, 0.15);
+          sceneAnimation.fromTo(scene.querySelector('.scan-line'), { y: 0, opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.4);
+          sceneAnimation.to(scene.querySelector('.scan-line'), { y: 145, duration: 1.2, ease: 'power1.inOut' }, 0.55);
+          sceneAnimation.to(scene.querySelector('.scan-line'), { opacity: 0, duration: 0.2 }, 1.75);
+          sceneAnimation.from(scene.querySelectorAll('.agent-node'), {
+            x: 15, autoAlpha: 0, duration: 0.45, stagger: 0.4
+          }, 0.8);
+          sceneAnimation.from(scene.querySelector('.review-card'), { y: 16, autoAlpha: 0, duration: 0.5 }, 2.05);
+          sceneAnimation.from(scene.querySelector('.ai-scene-note'), { autoAlpha: 0, duration: 0.4 }, 2.45);
+        }
       });
-    });
-    document.addEventListener('helion:solution-change', context.changeSolution);
-    cleanups.push(() => document.removeEventListener('helion:solution-change', context.changeSolution));
+      context.add('changeSolution', () => {
+        const targets = document.querySelectorAll('.solution-copy h3, .solution-copy > p, .solution-tags > span');
+        gsap.killTweensOf(targets);
+        gsap.fromTo(targets, { y: 10, autoAlpha: 0.45 }, {
+          y: 0, autoAlpha: 1, duration: 0.4, stagger: 0.035,
+          ease: 'power2.out', clearProps: 'transform,opacity,visibility'
+        });
+        context.animateScene();
+      });
+      const syncPreview = () => {
+        if (previewInView && !document.hidden) sceneAnimation?.play();
+        else sceneAnimation?.pause();
+      };
+      const previewObserver = new IntersectionObserver(entries => {
+        previewInView = entries[0].isIntersecting;
+        if (!sceneAnimation && previewInView) context.animateScene();
+        else syncPreview();
+      }, { threshold: 0.15 });
+      previewObserver.observe(preview);
+      observers.push(previewObserver);
+      replay.addEventListener('click', context.animateScene);
+      document.addEventListener('helion:solution-change', context.changeSolution);
+      document.addEventListener('visibilitychange', syncPreview);
+      cleanups.push(() => {
+        replay.hidden = true;
+        replay.removeEventListener('click', context.animateScene);
+        document.removeEventListener('helion:solution-change', context.changeSolution);
+        document.removeEventListener('visibilitychange', syncPreview);
+      });
+    }
 
     const diagram = document.querySelector('.system-visual');
     if (diagram) {

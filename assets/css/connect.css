@@ -1189,3 +1189,85 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .motion-toggle { display: none; }
 }
+
+/* Each business challenge has its own tangible, illustrative scene. */
+[hidden] { display: none !important; }
+.product-preview { min-height: 490px; }
+.case-scene { width: 100%; min-width: 0; }
+.preview-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; }
+.preview-footer .preview-caption { margin: 0; text-align: left; font-size: 7px; }
+.scene-replay { flex-shrink: 0; border: 1px solid var(--line); border-radius: 24px; padding: 7px 10px; font-size: 10px; background: transparent; min-height: 34px; }
+.scene-replay:hover { background: var(--paper); }
+.journey-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 23px; }
+.scene-eyebrow { display: block; font-size: 8px; letter-spacing: .07em; }
+.scene-badge { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; font-size: 9px; }
+.customer-card { display: flex; align-items: center; gap: 20px; padding: 24px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+.customer-avatar { position: relative; width: 62px; height: 62px; flex-shrink: 0; display: grid; place-items: center; font-size: 24px; border-radius: 50%; background: var(--ash); }
+.customer-avatar svg { position: absolute; inset: -4px; width: 70px; height: 70px; transform: rotate(-90deg); }
+.customer-avatar circle { fill: none; stroke: var(--orange); stroke-width: 2; }
+.customer-card h4 { font-size: 23px; letter-spacing: -.035em; margin: 6px 0; }
+.customer-card p { font-size: 11px; }
+.journey-track { display: flex; align-items: center; margin: 24px 26px 8px; }
+.journey-track span { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex-shrink: 0; }
+.journey-track i { height: 1px; background: var(--ink); flex: 1; transform-origin: left; }
+.journey-labels { display: flex; justify-content: space-between; font-size: 9px; margin: 0 8px 20px; }
+.message-card { display: flex; gap: 14px; padding: 18px; border: 1px solid var(--line); border-radius: 16px 16px 16px 4px; background: var(--paper); margin-right: 30px; }
+.message-icon { font-size: 22px; }
+.message-card b { font-size: 12px; font-weight: 500; }
+.message-card p { font-size: 11px; margin-top: 7px; line-height: 1.6; }
+.loyalty-card { margin-top: 15px; margin-left: 30px; padding: 19px; border-radius: 16px; background: var(--ink); color: var(--paper); display: flex; justify-content: space-between; gap: 15px; align-items: center; }
+.loyalty-card b { display: block; font-weight: 400; font-size: 15px; margin-top: 7px; }
+.loyalty-stamps { display: flex; gap: 7px; }
+.loyalty-stamps span { width: 26px; height: 26px; border: 1px solid #68716f; border-radius: 50%; display: grid; place-items: center; color: var(--orange); font-size: 20px; }
+.loyalty-stamps span:last-child { color: var(--paper); font-size: 13px; }
+.ai-workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+.document-card { padding: 20px; position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); min-height: 235px; }
+.document-icon { font-size: 36px; margin: 12px 0 7px; }
+.document-card b { font-size: 12px; font-weight: 500; }
+.document-lines { margin-top: 17px; display: grid; gap: 9px; }
+.document-lines i { display: block; height: 3px; background: var(--line); border-radius: 2px; }
+.document-lines i:nth-child(2) { width: 70%; }
+.document-lines i:last-child { width: 50%; }
+.scan-line { position: absolute; left: 14px; right: 14px; top: 52px; height: 2px; background: var(--orange); opacity: 0; }
+.agent-stack { display: grid; gap: 13px; }
+.agent-node { display: flex; align-items: center; gap: 10px; padding: 13px 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
+.agent-node>span { font-size: 21px; color: var(--orange); }
+.agent-node b { display: block; font-weight: 500; font-size: 12px; }
+.agent-node small { display: block; font-size: 8px; margin-top: 3px; }
+.agent-node i { margin-left: auto; font-style: normal; font-size: 11px; }
+.review-card { display: flex; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 14px; padding: 19px 15px; background: var(--paper); margin-top: 24px; }
+.review-icon { font-size: 27px; }
+.review-card b { display: block; font-size: 14px; font-weight: 500; margin: 6px 0; }
+.review-card p { font-size: 10px; }
+.review-status { margin-left: auto; font-size: 8px; padding: 5px 7px; border-radius: 8px; border: 1px solid var(--line); white-space: nowrap; }
+.ai-scene-note { margin: 20px 0 0; font-size: 11px; text-align: center; }
+@media(max-width:1000px) and (min-width:701px) {
+  .customer-card { gap: 12px; padding: 20px 12px; }
+  .customer-card h4 { font-size: 19px; }
+  .loyalty-card { margin-left: 0; padding: 16px 12px; flex-wrap: wrap; }
+  .ai-workspace { gap: 10px; }
+  .document-card { padding: 13px; }
+  .agent-node { gap: 6px; padding: 13px 8px; }
+  .review-status { display: none; }
+}
+@media(max-width:700px) {
+  .product-preview { min-height: 460px; }
+  .customer-card { padding: 20px 13px; gap: 14px; }
+  .customer-card h4 { font-size: 19px; }
+  .customer-card p { font-size: 10px; }
+  .customer-avatar { width: 52px; height: 52px; }
+  .customer-avatar svg { width: 60px; height: 60px; }
+  .message-card { margin-right: 12px; padding: 16px 13px; }
+  .loyalty-card { margin-left: 12px; padding: 16px 13px; gap: 9px; }
+  .loyalty-card b { font-size: 12px; }
+  .loyalty-stamps { gap: 4px; }
+  .loyalty-stamps span { width: 22px; height: 22px; font-size: 16px; }
+  .ai-workspace { gap: 10px; }
+  .document-card { padding: 13px; }
+  .agent-node { padding: 13px 8px; gap: 6px; }
+  .agent-node i { display: none; }
+  .review-card { gap: 9px; padding: 16px 12px; }
+  .review-card b { font-size: 12px; }
+  .review-status { display: none; }
+  .preview-footer { flex-wrap: wrap; }
+}
