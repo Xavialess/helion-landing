@@ -1,4 +1,18 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/inteligencia",
+      "destination": "/inteligencia-artificial.html"
+    },
+    {
+      "source": "/sistemas",
+      "destination": "/web-plataformas.html"
+    },
+    {
+      "source": "/conectados",
+      "destination": "/sensorica-iot.html"
+    }
+  ]
 }
