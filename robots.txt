@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helion.ec/sitemap.xml
