@@ -4,15 +4,15 @@
   "rewrites": [
     {
       "source": "/inteligencia",
-      "destination": "/inteligencia-artificial.html"
+      "destination": "/inteligencia-artificial"
     },
     {
       "source": "/sistemas",
-      "destination": "/web-plataformas.html"
+      "destination": "/web-plataformas"
     },
     {
       "source": "/conectados",
-      "destination": "/sensorica-iot.html"
+      "destination": "/sensorica-iot"
     }
   ]
 }
