@@ -13,14 +13,15 @@
 <link rel="icon" href="assets/helion-connect.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/inter-regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="assets/design-system-connect/variables.css">
-<link rel="stylesheet" href="assets/css/connect.css">
+<link rel="stylesheet" href="assets/css/connect.css"><link rel="stylesheet" href="assets/css/icons.css">
+<link rel="stylesheet" href="assets/css/elius.css">
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/js/connect.js" defer></script>
 <script src="assets/js/connect-motion.js" defer></script>
 </head>
 <body><a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header"><a class="logo" href="index.html" aria-label="Helion, inicio"><svg class="logo-symbol" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 7v26M31 7v26M9 20h22"/><circle cx="20" cy="20" r="5"/></svg><span>helion</span></a>
-<nav id="navigation" aria-label="Principal"><a href="index.html#soluciones">Qué resolvemos</a><a href="index.html#enfoque">Nuestro enfoque</a><a href="index.html#proceso">Cómo trabajamos</a>
+<nav id="navigation" aria-label="Principal"><a href="index.html#soluciones">Qué resolvemos</a><a href="index.html#enfoque">Nuestro enfoque</a><a href="index.html#proceso">Cómo trabajamos</a><a class="elius-nav" href="elius.html">Elius <span>CRM ↗</span></a>
 </nav><a class="header-contact" href="#contacto">Cuéntanos tu reto <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
 </header>
 <main id="main">
@@ -100,7 +101,7 @@
 <div><span id="row-c">Equipo notificado</span><span class="state">Completado</span>
 </div>
 </div>
-<div class="ai-note"><span aria-hidden="true">✳</span><span id="preview-note">Los datos se actualizan entre tus herramientas.</span>
+<div class="ai-note"><span aria-hidden="true"><svg class="context-icon icon-sync" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7a8 8 0 0 0-14-2L3 8m0-5v5h5M4 17a8 8 0 0 0 14 2l3-3m0 5v-5h-5"/></svg></span><span id="preview-note">Los datos se actualizan entre tus herramientas.</span>
 </div>
 </div>
 </div>
@@ -111,18 +112,23 @@
   <div class="journey-track" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span></div>
   <div class="journey-labels"><span>Conectar</span><span>Acompañar</span><span>Fidelizar</span></div>
   <div class="message-card scene-step"><span class="message-icon" aria-hidden="true">↗</span><div><b>La conversación continúa</b><p>“Hola, María. Tu pedido está listo.<br>¿Te ayudamos con algo más?”</p></div></div>
-  <div class="loyalty-card scene-step"><div><span class="scene-eyebrow">CADA VISITA CUENTA</span><b>Motivos para volver.</b></div><div class="loyalty-stamps" aria-label="Programa ilustrativo de fidelización"><span>✳</span><span>✳</span><span>✳</span><span>＋</span></div></div>
+  <div class="loyalty-card scene-step"><div><span class="scene-eyebrow">CADA VISITA CUENTA</span><b>Motivos para volver.</b></div><div class="loyalty-stamps" aria-label="Programa ilustrativo de fidelización"><span><svg class="context-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span><svg class="context-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span><svg class="context-icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>＋</span></div></div>
 </div>
 <div class="case-scene" data-scene="2" hidden>
   <div class="journey-heading"><span class="scene-eyebrow">H / INTELIGENCIA APLICADA</span><span class="scene-badge">IA + Tu equipo</span></div>
   <div class="ai-workspace"><div class="document-card scene-step"><span class="scene-eyebrow">DOCUMENTO DE ENTRADA</span><div class="document-icon" aria-hidden="true">≡</div><b>Una nueva solicitud.</b><div class="document-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="scan-line" aria-hidden="true"></div></div>
-  <div class="agent-stack"><div class="agent-node scene-step"><span aria-hidden="true">✳</span><div><b>Leer</b><small>Extraer información</small></div><i aria-hidden="true">✓</i></div><div class="agent-node scene-step"><span aria-hidden="true">⌘</span><div><b>Organizar</b><small>Dar contexto</small></div><i aria-hidden="true">✓</i></div><div class="agent-node scene-step"><span aria-hidden="true">↗</span><div><b>Preparar</b><small>Proponer una acción</small></div><i aria-hidden="true">✓</i></div></div></div>
+  <div class="agent-stack"><div class="agent-node scene-step"><span aria-hidden="true"><svg class="context-icon icon-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 12h4M8 16h3"/><circle cx="15" cy="15" r="3"/><path d="m17.2 17.2 2.3 2.3"/></svg></span><div><b>Leer</b><small>Extraer información</small></div><i aria-hidden="true">✓</i></div><div class="agent-node scene-step"><span aria-hidden="true">⌘</span><div><b>Organizar</b><small>Dar contexto</small></div><i aria-hidden="true">✓</i></div><div class="agent-node scene-step"><span aria-hidden="true">↗</span><div><b>Preparar</b><small>Proponer una acción</small></div><i aria-hidden="true">✓</i></div></div></div>
   <div class="review-card scene-step"><span class="review-icon" aria-hidden="true">◎</span><div><span class="scene-eyebrow">EL CRITERIO SIGUE SIENDO TUYO</span><b>Preparado para tu revisión.</b><p>Tu equipo valida el siguiente paso.</p></div><span class="review-status">Por revisar</span></div>
   <p class="ai-scene-note">La IA se encarga del proceso.<br>Las decisiones importantes siguen contigo.</p>
 </div>
 <div class="preview-footer"><span class="preview-caption">EJEMPLO ILUSTRATIVO · ADAPTADO A CADA NEGOCIO</span><button class="scene-replay" type="button" hidden>↻ Ver animación</button></div>
 </div>
 </div>
+</section>
+<section class="section elius-feature" id="elius" aria-labelledby="elius-feature-title">
+<div class="section-label"><span><i aria-hidden="true">↗</i>Un producto de Helion</span><span>ELIUS / CRM</span></div>
+<div class="elius-feature-body"><div class="elius-feature-copy"><span class="elius-wordmark"><svg class="elius-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M28 8H15a7 7 0 0 0-7 7v10a7 7 0 0 0 7 7h13M8 20h17" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="20" r="4" fill="currentColor"/></svg>elius<span class="elius-by">by helion</span></span><span class="elius-kicker">CRM NATIVO EN INTELIGENCIA ARTIFICIAL</span><h2 id="elius-feature-title">Tu CRM.<br><span class="elius-native">AI native.</span></h2><p>Conoce Elius, el CRM nativo en inteligencia artificial de Helion. IA integrada en la gestión de clientes, la información y los procesos de tu equipo.</p><a class="elius-button elius-button-light" href="elius.html">Descubre Elius <span aria-hidden="true">↗</span></a><p class="elius-deployment">Una implementación para tu empresa, con tu propio dominio.</p></div>
+<div class="elius-orbit" aria-hidden="true"><div class="elius-orbit-ring ring-one"></div><div class="elius-orbit-ring ring-two"></div><div class="elius-orbit-ring ring-three"></div><span class="orbit-label orbit-label-a">RELACIONES</span><span class="orbit-label orbit-label-b">OPORTUNIDADES</span><span class="orbit-label orbit-label-c">INTELIGENCIA</span><div class="elius-orbit-core"><svg class="elius-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M28 8H15a7 7 0 0 0-7 7v10a7 7 0 0 0 7 7h13M8 20h17" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="20" r="4" fill="currentColor"/></svg></div><span class="orbit-point point-one"></span><span class="orbit-point point-two"></span><span class="orbit-caption">TODO CONECTA. TU NEGOCIO AVANZA.</span></div></div>
 </section>
 <section class="section" id="enfoque">
 <div class="section-label"><span><i aria-hidden="true">↗</i>Nuestro enfoque</span><span>(02)</span>
@@ -149,7 +155,7 @@
 <article class="capability">
 <div class="capability-number">02 / INTELIGENCIA EN TU OPERACIÓN
 </div>
-<div class="capability-art intelligence-art" aria-hidden="true"><span>Tu contexto</span><i>→</i><b>✳</b><i>→</i><span>Acción</span>
+<div class="capability-art intelligence-art" aria-hidden="true"><span>Tu contexto</span><i>→</i><b><svg class="context-icon icon-processor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></b><i>→</i><span>Acción</span>
 </div>
 <h3>Menos trabajo repetitivo.<br>Más capacidad.
 </h3>
@@ -251,7 +257,7 @@
 </div>
 <div><label for="email">Tu correo</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="tu@empresa.com">
 </div>
-</div><label for="challenge">¿Qué quieres mejorar?</label><select id="challenge" name="challenge"><option>Quiero ordenar mi operación</option><option>Quiero conectar con mis clientes</option><option>Quiero liberar tiempo de mi equipo</option><option>Quiero conectar dispositivos y datos</option><option>Tengo otro reto / necesito orientación</option></select><label for="message">Cuéntanos un poco</label><textarea id="message" name="message" required maxlength="2500" rows="4" placeholder="¿Qué pasa hoy y cómo te gustaría que funcionara?"></textarea><button class="arrow-button" type="submit"><span aria-hidden="true">↗</span>Preparar mi mensaje</button>
+</div><label for="challenge">¿Qué quieres mejorar?</label><select id="challenge" name="challenge"><option>Quiero ordenar mi operación</option><option>Quiero conectar con mis clientes</option><option>Quiero liberar tiempo de mi equipo</option><option>Quiero conectar dispositivos y datos</option><option>Quiero conocer Elius CRM</option><option>Tengo otro reto / necesito orientación</option></select><label for="message">Cuéntanos un poco</label><textarea id="message" name="message" required maxlength="2500" rows="4" placeholder="¿Qué pasa hoy y cómo te gustaría que funcionara?"></textarea><button class="arrow-button" type="submit"><span aria-hidden="true">↗</span>Preparar mi mensaje</button>
 <p class="form-note">Abriremos tu aplicación de correo con el mensaje listo para enviar.
 </p>
 <p id="form-status" role="status">
@@ -264,7 +270,7 @@
 <p>Entendemos el reto.<br>Hacemos tangible la solución.
 </p><a href="#main">Volver arriba ↑</a>
 </div>
-<div class="footer-bottom"><span>© 2026 Helion Technology</span><span>Desde Ecuador. Con visión global.</span><a href="mailto:info@helion.ec">Hablemos ↗</a>
+<div class="footer-bottom"><span>© 2026 Helion Technology</span><span>Desde Ecuador. Con visión global.</span><a href="elius.html">Elius · Un producto de Helion ↗</a><a href="mailto:info@helion.ec">Hablemos ↗</a>
 </div>
 </footer>
 </body>

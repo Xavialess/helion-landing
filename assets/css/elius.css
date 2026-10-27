@@ -1,0 +1,117 @@
+/* Elius uses Helion's existing typography, surfaces and ember accent. */
+.elius-mark{width:38px;height:38px;flex-shrink:0}
+.elius-wordmark{display:inline-flex;align-items:center;gap:9px;font-size:38px;letter-spacing:-2px;line-height:1;font-weight:500}
+.elius-by{font-size:11px;letter-spacing:0;margin:12px 0 0 8px;font-weight:400;opacity:.65}
+.elius-kicker{display:block;font-size:10px;letter-spacing:.12em;line-height:1.6;font-weight:500}
+.site-header nav{gap:24px}
+.site-header nav a{white-space:nowrap}
+.elius-nav{display:flex;align-items:center;gap:7px}
+.elius-nav span{font-size:9px;letter-spacing:.04em;background:#f3e9df;border:1px solid #ddcdc0;padding:2px 6px;border-radius:4px}
+.elius-nav[aria-current]{text-decoration:underline;text-underline-offset:5px}
+.elius-wrap,.elius-crosslink{width:min(1200px,calc(100% - 80px));margin-inline:auto}
+.elius-button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;background:var(--ink);color:var(--paper);padding:15px 22px;border:1px solid var(--ink);border-radius:30px;font-size:14px;transition:background .2s,transform .2s;white-space:nowrap}
+.elius-button>span{font-size:22px;line-height:1}
+.elius-button:hover{background:#263a38;transform:translateY(-2px)}
+.elius-button-light{color:var(--ink);background:var(--paper);border-color:var(--paper)}
+.elius-button-light:hover{background:#e6ded1}
+.elius-feature-body{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:var(--paper);border-radius:24px;overflow:hidden;margin-top:30px;min-height:500px;position:relative}
+.elius-feature-copy{padding:54px;position:relative;z-index:1}
+.elius-feature-copy>.elius-kicker{color:#c0c5bc;margin-top:42px;margin-bottom:17px;font-size:9px}
+.elius-feature-copy h2{font-size:clamp(34px,3.4vw,48px);line-height:1.07}
+.elius-feature-copy p{max-width:350px;color:#b9c3bd;font-size:15px;margin:22px 0 28px}
+.elius-feature-login{display:block;font-size:11px;color:#c0c5bc;margin-top:20px;text-decoration:underline;text-underline-offset:4px}
+.elius-orbit{position:relative;display:flex;align-items:center;justify-content:center;min-height:450px;background:radial-gradient(ellipse at center,#59402a33,transparent 65%)}
+.elius-orbit-ring{border:1px solid #5d69624d;border-radius:50%;position:absolute;width:270px;height:270px}
+.ring-one{width:440px;height:440px}.ring-two{width:340px;height:340px}.ring-three{width:240px;height:240px}
+.elius-orbit:before,.elius-orbit:after{content:'';position:absolute;background:#5d696233;width:100%;height:1px;left:0;top:50%}
+.elius-orbit:after{width:1px;height:100%;left:50%;top:0}
+.elius-orbit-core{width:110px;height:110px;display:grid;place-items:center;background:var(--orange);color:var(--ink);border-radius:30px;transform:rotate(-8deg);box-shadow:0 0 95px #fd532125}
+.elius-orbit-core .elius-mark{width:66px;height:66px;transform:rotate(8deg)}
+.orbit-label{font-size:9px;letter-spacing:.12em;position:absolute;background:#001011;padding:6px 10px;color:#bec6bd;border:1px solid #5d69624d;border-radius:16px;z-index:1}
+.orbit-label-a{top:20%;left:17%}.orbit-label-b{right:3%;top:50%}.orbit-label-c{bottom:20%;left:12%}
+.orbit-point{width:7px;height:7px;border-radius:50%;background:var(--orange);position:absolute}.point-one{top:27%;right:25%}.point-two{bottom:22%;right:24%}
+.orbit-caption{position:absolute;bottom:34px;font-size:8px;letter-spacing:.16em;color:#a9b4ac}
+.elius-crosslink{margin-top:32px;padding:20px 24px;border:1px solid var(--line);border-radius:14px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:13px}
+.elius-crosslink>span{display:flex;align-items:center;gap:10px}.elius-crosslink .elius-mark{width:22px;height:22px;color:var(--orange)}
+.elius-crosslink a{text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
+/* Product page */
+.elius-hero{padding-top:49px}
+.elius-hero-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:52px}
+.elius-hero-top>.elius-kicker{display:flex;align-items:center;gap:10px;font-size:9px}
+.elius-hero-top .elius-kicker i{width:6px;height:6px;background:var(--orange);border-radius:50%}
+.elius-hero-grid{display:grid;grid-template-columns:1.8fr 1fr;gap:48px;align-items:start}
+.elius-hero h1{font-size:clamp(62px,6.7vw,94px);letter-spacing:-.065em;line-height:1.03}
+.elius-hero-aside{padding-top:6px;max-width:330px}
+.elius-hero-aside>.elius-kicker{margin-bottom:15px;color:#59635e}
+.elius-hero-aside>p{font-size:22px;line-height:1.4;letter-spacing:-.025em}
+.elius-hero-aside>p.elius-hero-description{font-size:14px;color:#59635e;letter-spacing:0;margin:15px 0 24px}
+.elius-signin{display:block;font-size:12px;margin:16px 0 0 6px}.elius-signin:hover{text-decoration:underline;text-underline-offset:4px}.elius-signin span{margin-left:8px}
+.elius-hero-rule{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:52px;padding:17px 0 0;font-size:9px;letter-spacing:.08em;gap:20px}
+.elius-hero-rule a{white-space:nowrap}.elius-hero-rule a span{margin-left:16px;font-size:16px}
+.elius-showcase{margin-top:50px;background:#eae8e1;padding:24px 26px 16px;border-radius:18px;position:relative}
+.elius-preview-top{display:flex;justify-content:space-between;gap:15px;font-size:9px;letter-spacing:.06em;margin-bottom:18px}.elius-preview-top>span:last-child{color:#55615b;letter-spacing:0}
+.elius-workspace{color:#ededed;display:grid;grid-template-columns:186px minmax(0,1fr);background:#191919;border:1px solid #373737;border-radius:10px;overflow:hidden;box-shadow:0 20px 40px -25px #18231d44;min-height:448px}
+.elius-sidebar{background:#1d1d1d;border-right:1px solid #343434;padding:23px 14px 16px;display:flex;flex-direction:column}
+.elius-sidebar .elius-wordmark{font-size:27px;letter-spacing:-1.4px;padding-left:8px;gap:6px}.elius-sidebar .elius-mark{width:27px;height:27px}.elius-sidebar .elius-by{display:none}
+.elius-workspace-name{display:flex;gap:9px;align-items:center;margin-top:25px;padding:0 6px;font-size:11px}.elius-workspace-name>span{background:#303030;border:1px solid #444444;border-radius:5px;width:24px;height:24px;display:grid;place-items:center;font-size:10px}.elius-workspace-name i{font-style:normal;margin-left:auto}
+.elius-sidebar-label{font-size:7px;letter-spacing:.1em;color:#aaaaaa;margin:26px 6px 10px}
+.elius-tabs{display:flex;flex-direction:column;gap:4px}
+.elius-tabs button{border:1px solid transparent;background:transparent;font-size:11px;display:flex;gap:10px;align-items:center;text-align:left;border-radius:6px;padding:10px;color:#b9b9b9}
+.elius-tabs button>span{font-size:15px;line-height:1}.elius-tabs button:hover{background:#282828}
+.elius-tabs button[aria-selected=true]{background:#303030;border-color:#414141;color:#f0f0f0}
+.elius-sidebar-bottom{margin-top:auto;display:flex;align-items:center;gap:10px;padding:24px 6px 0;font-size:11px}.elius-sidebar-bottom small{font-size:9px;color:#a5a5a5}
+.elius-avatar{font-size:8px;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:#393934;color:#d0d8c9;font-weight:500;font-style:normal;flex-shrink:0}
+.elius-preview-main{padding:30px 26px 22px;min-width:0}
+.elius-preview-main [role=tabpanel][hidden]{display:none}
+.elius-panel-header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:28px}.elius-panel-header .elius-kicker{font-size:7px;color:#a1a1a1;margin-bottom:8px}.elius-panel-header h3{font-size:25px;letter-spacing:-.04em}.elius-view-tag{font-size:8px;color:#aaaaaa;border:1px solid #3b3b3b;border-radius:5px;padding:5px 8px;white-space:nowrap}
+.elius-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.elius-column h4{display:flex;align-items:center;gap:6px;font-size:10px;margin-bottom:13px;white-space:nowrap}.elius-column h4>span{margin-left:auto;color:#a5a5a5;font-size:8px}.elius-column h4 i{width:6px;height:6px;border-radius:50%;background:#9f9f9f}.elius-column:nth-child(2) h4 i{background:var(--orange)}.elius-column:nth-child(3) h4 i{background:#89ac94}
+.elius-deal{padding:14px 12px;background:#191919;border:1px solid #363636;border-radius:7px;margin-bottom:10px;box-shadow:0 3px 5px #17201a03}.elius-deal-logo{display:grid;place-items:center;width:26px;height:26px;background:#304139;border-radius:6px;font-size:20px;font-weight:500;line-height:1}.elius-deal-logo.alternate{background:#45352d;color:#e1b590}.elius-deal h5{margin:13px 0 3px;font-size:12px;font-weight:500;letter-spacing:-.02em}.elius-deal p{font-size:9px;color:#adadad}.elius-deal>div{display:flex;justify-content:space-between;align-items:center;font-size:8px;gap:8px;margin-top:16px;color:#b1b1b1}.elius-deal .elius-avatar{width:20px;height:20px;font-size:7px}.featured-deal{border-color:#b77450}.elius-deal>div.elius-deal-note{border-top:1px solid #4b3830;padding-top:10px;font-size:8px;color:#e1aa84;justify-content:flex-start}
+.elius-context-line{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#242824;border-radius:6px;margin-top:10px}.elius-context-line>span{color:#f7966d;font-size:18px}.elius-context-line p{font-size:10px;color:#b3beb0}
+.elius-preview-caption{display:flex;justify-content:space-between;gap:24px;align-items:center;padding-top:16px}.elius-preview-caption>span{font-size:8px;letter-spacing:.05em}.elius-preview-caption p{font-size:9px;color:#586153;text-align:right}
+.elius-person-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px;align-items:center;padding:17px 6px;border-bottom:1px solid #353535;font-size:11px}.elius-person-row>span:first-child{display:flex;align-items:center;gap:10px}.elius-person-row.table-heading{font-size:7px;letter-spacing:.08em;color:#a5a5a5;padding-top:0}.elius-person-context{margin-top:24px;padding:20px;background:#232723;border-radius:7px}.elius-person-context .elius-kicker{font-size:7px;color:#a5b69f}.elius-person-context h4{font-size:24px;line-height:1.2;letter-spacing:-.03em;margin:10px 0}.elius-person-context p{font-size:11px;color:#b9c6b2}
+.elius-ai-example{max-width:610px;margin:0 auto}.elius-ai-question{display:flex;gap:14px;align-items:center;border-bottom:1px solid #353535;padding:0 0 24px}.elius-ai-question p{font-size:13px;max-width:380px}.elius-ai-answer{display:flex;gap:17px;margin-top:26px}.elius-ai-emblem{font-size:28px;color:#f7966d;line-height:1}.elius-ai-answer .elius-kicker{font-size:8px;color:#aaaaaa}.elius-ai-answer h4{font-size:25px;letter-spacing:-.04em;margin:12px 0}.elius-ai-answer p{font-size:12px;color:#b9bfb5;max-width:450px}.elius-ai-source{display:flex;justify-content:space-between;margin-top:20px;background:#262a25;border:1px solid #3c4439;padding:12px;border-radius:6px;font-size:10px}.elius-ai-answer small{display:block;font-size:9px;color:#b4b9ae;margin-top:15px}
+.elius-manifesto{background:var(--ink);color:var(--paper);padding:85px 0 65px;margin-top:100px}.elius-manifesto>.elius-wrap>.elius-kicker{color:#bcc7bc;font-size:9px}.elius-manifesto h2{font-size:clamp(42px,5.6vw,78px);margin:30px 0 65px;line-height:1.06}.elius-manifesto h2>span{color:#a7b5a3}.elius-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:45px;border-top:1px solid #586458;padding-top:28px}.elius-pillars article>span{font-size:9px;letter-spacing:.09em;color:#bac5b7}.elius-pillars h3{font-size:23px;margin:25px 0 14px}.elius-pillars p{font-size:14px;color:#b1bfad;max-width:300px}
+.elius-helion{padding-top:100px;display:grid;grid-template-columns:1.2fr 1fr;gap:80px}.elius-helion h2{margin-top:24px}.elius-helion>div:last-child{padding-top:37px}.elius-helion p{color:#5c665d;font-size:16px;margin-bottom:20px}.elius-helion .text-action{margin-top:14px;font-size:14px}
+.elius-faq{padding-top:100px}.elius-faq-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;margin-top:28px}.elius-faq h2{font-size:38px}.elius-faq details{border-bottom:1px solid var(--line);padding:20px 0}.elius-faq details:first-child{padding-top:0}.elius-faq summary{font-size:16px;cursor:pointer}.elius-faq details p{font-size:14px;color:#5c665d;padding:15px 0 4px;max-width:520px}.elius-faq details a{text-decoration:underline;text-underline-offset:4px}
+.elius-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:701px){.elius-page .elius-hero-grid{animation:elius-enter .7s ease-out both}.elius-page .elius-showcase{animation:elius-enter .9s .1s ease-out both}}
+@keyframes elius-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px) and (min-width:701px){.site-header nav{gap:16px;font-size:12px}.elius-hero-grid{gap:30px;grid-template-columns:1.6fr 1fr}.elius-hero h1{font-size:6.7vw}.elius-workspace{grid-template-columns:160px minmax(0,1fr)}.elius-preview-main{padding:24px 18px}.elius-sidebar{padding-inline:10px}.elius-tabs button{font-size:10px;gap:7px}.elius-view-tag{display:none}.elius-feature-copy{padding:40px}.elius-orbit .ring-one{width:340px;height:340px}.elius-orbit .ring-two{width:270px;height:270px}.elius-orbit .ring-three{width:200px;height:200px}}
+@media(max-width:1000px){.elius-wrap,.elius-crosslink{width:calc(100% - 48px)}.elius-feature-copy p{font-size:14px}.elius-by{margin-left:4px}.footer-bottom{flex-wrap:wrap;row-gap:12px}}
+@media(max-width:700px){
+ .elius-wrap,.elius-crosslink{width:calc(100% - 40px)}.site-header nav{gap:12px}.elius-nav span{font-size:10px}.elius-feature-body{grid-template-columns:1fr;margin-top:20px;border-radius:16px}.elius-feature-copy{padding:32px 26px 0}.elius-feature-copy>.elius-kicker{margin-top:32px}.elius-feature-copy h2{font-size:36px}.elius-feature-copy p{margin:20px 0 24px}.elius-wordmark{font-size:34px}.elius-by{font-size:10px}.elius-orbit{min-height:360px;overflow:hidden}.elius-orbit .ring-one{width:330px;height:330px}.elius-orbit .ring-two{width:250px;height:250px}.elius-orbit .ring-three{width:170px;height:170px}.elius-orbit-core{width:85px;height:85px;border-radius:24px}.elius-orbit-core .elius-mark{width:54px;height:54px}.orbit-label-a{top:17%;left:12%}.orbit-label-b{right:2%}.orbit-label-c{bottom:20%;left:3%}.orbit-caption{bottom:16px;font-size:7px}.elius-crosslink{flex-direction:column;align-items:flex-start;padding:18px;font-size:12px}.elius-crosslink>span{display:block}.elius-crosslink .elius-mark{vertical-align:middle;margin-right:7px}
+ .elius-hero{padding-top:25px}.elius-hero-top{padding-bottom:35px;align-items:flex-start;gap:15px}.elius-hero-top>.elius-kicker{font-size:7px;gap:6px;padding-top:10px}.elius-hero-top .elius-by{display:none}.elius-hero-grid{grid-template-columns:1fr;gap:30px}.elius-hero h1{font-size:clamp(41px,9.2vw,64px);line-height:1.04}.elius-hero-aside{padding-top:0;max-width:440px}.elius-hero-aside>.elius-kicker{font-size:8px;margin-bottom:12px}.elius-hero-aside>p{font-size:20px;max-width:320px}.elius-hero-aside>p.elius-hero-description{font-size:14px;max-width:350px}.elius-signin{display:inline-block;margin-left:15px;font-size:11px}.elius-button{font-size:12px;padding:13px 17px;gap:23px}.elius-hero-rule{margin-top:35px;font-size:7px;line-height:1.7;align-items:center;gap:15px}.elius-hero-rule>span{max-width:170px}.elius-hero-rule a span{margin-left:5px}
+ .elius-showcase{margin-top:30px;padding:14px 12px 12px;border-radius:12px}.elius-preview-top{font-size:6px;margin-bottom:12px;align-items:center}.elius-preview-top>span:last-child{max-width:90px;text-align:right;font-size:7px}.elius-workspace{display:block;min-height:0}.elius-sidebar{padding:16px 10px 10px;border-right:0;border-bottom:1px solid #e1e2d9}.elius-sidebar>.elius-wordmark,.elius-workspace-name,.elius-sidebar-label,.elius-sidebar-bottom{display:none}.elius-tabs{flex-direction:row;gap:4px;justify-content:space-between}.elius-tabs button{font-size:9px;padding:8px 6px;gap:5px;white-space:nowrap}.elius-tabs button>span{font-size:12px}.elius-preview-main{padding:22px 12px 14px;min-height:390px}.elius-panel-header{margin-bottom:22px}.elius-panel-header h3{font-size:21px}.elius-panel-header .elius-kicker{font-size:6px}.elius-view-tag{display:none}.elius-board{grid-template-columns:repeat(3,minmax(150px,1fr));gap:10px;overflow-x:auto;padding:0 2px 10px;scroll-snap-type:x proximity}.elius-column{scroll-snap-align:start}.elius-column h4{font-size:9px}.elius-deal{padding:12px 10px}.elius-deal h5{font-size:11px}.elius-context-line{padding:10px;gap:8px}.elius-context-line p{font-size:9px}.elius-preview-caption{display:block;padding-top:12px}.elius-preview-caption>span{font-size:6px}.elius-preview-caption p{text-align:left;font-size:8px;margin-top:5px}.elius-person-row{font-size:8px;gap:8px;padding:15px 0;grid-template-columns:1.15fr .9fr 1fr}.elius-person-row>span:first-child{gap:6px}.elius-person-row.table-heading{font-size:6px}.elius-person-row .elius-avatar{width:20px;height:20px;font-size:7px}.elius-person-context{padding:15px}.elius-person-context h4{font-size:22px}.elius-person-context p{font-size:10px}.elius-ai-question{gap:10px;padding-bottom:20px}.elius-ai-question p{font-size:11px}.elius-ai-answer{gap:10px;margin-top:20px}.elius-ai-answer h4{font-size:22px}.elius-ai-answer p{font-size:11px}.elius-ai-answer .elius-kicker{font-size:6px}.elius-ai-source{font-size:8px;padding:10px}.elius-ai-answer small{font-size:8px}
+ .elius-manifesto{margin-top:60px;padding:55px 0 40px}.elius-manifesto>.elius-wrap>.elius-kicker{font-size:7px}.elius-manifesto h2{font-size:42px;margin:27px 0 40px}.elius-pillars{grid-template-columns:1fr;gap:30px;padding-top:25px}.elius-pillars article>span{font-size:8px}.elius-pillars h3{margin:12px 0 10px;font-size:24px}.elius-pillars p{font-size:14px;max-width:400px}.elius-helion{padding-top:60px;grid-template-columns:1fr;gap:25px}.elius-helion .elius-kicker{font-size:8px}.elius-helion h2{font-size:38px;margin-top:18px}.elius-helion>div:last-child{padding-top:0}.elius-helion p{font-size:15px}.elius-faq{padding-top:60px}.elius-faq-grid{grid-template-columns:1fr;gap:30px}.elius-faq h2{font-size:34px}.elius-faq summary{font-size:14px}.elius-faq details p{font-size:13px}.elius-faq>.elius-kicker{font-size:8px}
+}
+@media(max-width:360px){.elius-hero h1{font-size:39px}.elius-signin{display:block;margin-left:4px}.elius-tabs button{font-size:8px;gap:3px;padding:8px 5px}.elius-manifesto h2{font-size:36px}.elius-feature-copy{padding-inline:22px}.elius-feature-copy h2{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.elius-page .elius-hero-grid,.elius-page .elius-showcase{animation:none}.elius-button{transition:none}.elius-button:hover{transform:none}}
+
+@media(min-width:701px) and (max-width:900px){.site-header{gap:14px}.site-header .logo{font-size:29px;gap:5px}.site-header .logo-symbol{width:29px;height:29px}.site-header nav{gap:12px;font-size:11px}.site-header .header-contact{font-size:10px;padding:9px 11px;gap:9px;white-space:nowrap}.elius-nav{gap:4px}.elius-nav span{font-size:7px;padding:2px 4px}}
+
+/* Product details observed in the authenticated Elius workspace. */
+.elius-workspace-modules{display:flex;flex-direction:column;gap:13px;padding:18px 10px 8px;color:#a6a6a6;font-size:10px;border-top:1px solid #343434;margin-top:18px}
+.elius-skill-reference{display:inline-block;font-size:9px;color:#c1b7e2;background:#30283f;border:1px solid #504265;padding:3px 6px;border-radius:4px;margin:0 5px 5px 0}
+.elius-record-reference{color:#bad0e4;background:#27333d;padding:2px 5px;border-radius:4px;white-space:nowrap}
+.elius-ai-answer p b{font-weight:500;color:#e0e0e0}
+.elius-flow-heading{margin:0 0 20px}.elius-flow-status{font-size:8px;color:#a3c5ab;letter-spacing:.03em}
+.elius-flow-heading h4{font-size:25px;letter-spacing:-.03em;margin:12px 0 8px}.elius-flow-heading p{font-size:11px;color:#b0b0b0}
+.elius-flow{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.elius-flow li{border:1px solid #3c3c3c;background:#202020;border-radius:7px;padding:16px 13px}
+.elius-flow li>span{width:28px;height:28px;border:1px solid #55503c;color:#dbbf8b;border-radius:6px;display:grid;place-items:center;font-size:18px;margin-bottom:20px}
+.elius-flow small{display:block;font-size:7px;letter-spacing:.08em;color:#aaa;margin-bottom:9px}.elius-flow b{display:block;font-size:12px;font-weight:500;line-height:1.5}.elius-flow p{font-size:10px;color:#aaa;margin-top:8px}.elius-flow-footnote{display:block;font-size:9px;color:#aaa;margin-top:18px}
+@media(max-width:700px){
+.elius-tabs{overflow-x:auto;justify-content:flex-start;padding-bottom:5px}.elius-tabs button{flex-shrink:0}
+.elius-workspace-modules{display:none}.elius-flow{grid-template-columns:1fr;gap:9px}.elius-flow li{display:flex;gap:13px;align-items:center;padding:12px}.elius-flow li>span{flex-shrink:0;margin:0}.elius-flow small{margin-bottom:5px;font-size:6px}.elius-flow b{font-size:11px}.elius-flow p{margin-top:4px;font-size:9px}
+.elius-flow-heading h4{font-size:22px}.elius-flow-heading p{font-size:10px}.elius-flow-footnote{font-size:8px}
+.elius-ai-answer .elius-ai-source{background:#262a25;border-color:#3c4439}.elius-ai-answer p{color:#b9bfb5}.elius-person-context{background:#232723}.elius-person-context .elius-kicker{color:#a5b69f}.elius-person-context p{color:#b9c6b2}
+}
+@media(max-width:700px){.elius-tabs{gap:2px;justify-content:space-between}.elius-tabs button{padding:8px 5px;gap:0}.elius-tabs button>span{display:none}}
+
+.elius-hero-aside>p.elius-deployment{font-size:11px;color:#59635e;letter-spacing:0;line-height:1.6;margin-top:16px;max-width:280px}
+.elius-feature-copy p.elius-deployment{font-size:11px;color:#c0c5bc;line-height:1.6;margin:18px 0 0;max-width:290px}
+
+/* AI native is the primary product promise, at headline scale. */
+.elius-native{color:#c6401d;font-weight:500}
+.elius-feature-copy .elius-native{color:#ff9269}
